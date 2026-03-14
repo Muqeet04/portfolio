@@ -1,330 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muqeet Mahmood | Software Engineer</title>
-    <meta name="description" content="Portfolio of Muqeet Mahmood, a passionate Computer Science student specializing in Data Structures, Machine Learning, and Full Stack development.">
-    
+    <meta name="description"
+        content="Portfolio of Muqeet Mahmood, a passionate Computer Science student specializing in Data Structures, Machine Learning, and Full Stack development.">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <link rel="stylesheet" href="style.css">
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
+
 <body>
-    <!-- Custom Cursor -->
-    <div class="cursor-dot" data-cursor-dot></div>
-    <div class="cursor-outline" data-cursor-outline></div>
+<!-- 3D Background Canvas -->
+<canvas id="canvas-3d"></canvas>
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-content">
-            <a href="#home" class="logo">MM<span>.</span></a>
-            <div class="nav-links">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#education" class="nav-link">Education</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#skills" class="nav-link">Skills</a>
-            </div>
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
+<!-- Custom Cursor -->
+<div class="cursor-dot" data-cursor-dot></div>
+<div class="cursor-outline" data-cursor-outline></div>
+
+<!-- Scroll Progress -->
+<div id="scroll-progress"></div>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+    <div class="nav-content">
+        <a href="#home" class="logo">MM<span>.</span></a>
+        <div class="nav-links">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#education" class="nav-link">Education</a>
         </div>
-    </nav>
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</nav>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero section">
-            <div class="glow-bg"></div>
-            <div class="hero-content">
-                <p class="greeting slide-up">Hello, I'm</p>
-                <h1 class="name slide-up-delay-1">Muqeet <span class="gradient-text">Mahmood</span></h1>
-                <h2 class="title slide-up-delay-2">Computer Science Student & Developer</h2>
-                <p class="summary slide-up-delay-3">
-                    Passionate Computer Science student with a strong foundation in Data Structures and Algorithms (DSA). 
-                    Eager to implement innovative solutions through hands-on projects in Machine Learning, Deep Learning, 
-                    and Full Stack development.
+<main>
+    <section id="home" class="hero section">
+        <div class="glow-bg"></div>
+
+        <!-- Floating Decorative Elements -->
+        <div class="floating-orb orb-1"></div>
+        <div class="floating-orb orb-2"></div>
+        <div class="floating-orb orb-3"></div>
+
+        <div class="hero-content">
+            <p class="greeting slide-up">Hello World, I'm</p>
+            <h1 class="name slide-up-delay-1">Muqeet <span class="gradient-text">Mahmood</span></h1>
+            <h2 class="title slide-up-delay-2">Software Engineer & Data Scientist</h2>
+            <p class="summary slide-up-delay-3">
+                Passionate Computer Science student specialized in Data Science and Artificial Intelligence. Experienced in building Deep Learning models using TensorFlow and developing unsupervised learning dashboards. Proven ability to bridge the gap between model training and real-time application deployment via Streamlit and MERN stack.
+            </p>
+            <div class="cta-group slide-up-delay-4">
+                <a href="mailto:muqeetmahmood80@gmail.com" class="btn btn-primary magnetic">
+                    <i class="fas fa-envelope"></i> Get In Touch
+                </a>
+                <div class="social-links">
+                    <a href="https://github.com/Muqeet04" target="_blank" aria-label="GitHub" class="magnetic"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/muqeet-mahmood-30a62b334/" target="_blank"
+                        aria-label="LinkedIn" class="magnetic"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div>Scroll Down</div>
+        </div>
+    </section>
+
+    <!-- About/Contact Section -->
+    <section id="about" class="about section">
+        <h2 class="section-title syntax-heading">&lt;Profile <span class="gradient-text">/</span>&gt;</h2>
+        <div class="about-grid profile-highlight zoom-in">
+            <div class="about-text glass-card">
+                <div class="mac-buttons"><span></span><span></span><span></span></div>
+                <p>
+                    Passionate Computer Science student specialized in <strong class="highlight">Data Science</strong> and <strong class="highlight">Artificial Intelligence</strong>. Experienced in building Deep Learning models using TensorFlow and developing unsupervised learning dashboards. Proven ability to bridge the gap between model training and real-time application deployment via Streamlit and MERN stack.
                 </p>
-                <div class="cta-group slide-up-delay-4">
-                    <a href="mailto:muqeetmahmood80@gmail.com" class="btn btn-primary">
-                        <i class="fas fa-envelope"></i> Get In Touch
-                    </a>
-                    <div class="social-links">
-                        <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <div class="contact-info mt-4">
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+92-304 8395531</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>muqeetmahmood80@gmail.com</span>
                     </div>
                 </div>
             </div>
-            <div class="scroll-indicator">
-                <div class="mouse">
-                    <div class="wheel"></div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+        <h2 class="section-title syntax-heading">const <span class="gradient-text">experience</span> = [</h2>
+        <div class="experience-container slide-in-left">
+            <div class="glass-card experience-card hover-lift">
+                <div class="mac-buttons"><span></span><span></span><span></span></div>
+                <div class="card-header">
+                    <div class="role-company">
+                        <h3>Data Science Intern (Remote)</h3>
+                        <p class="company">Elevvo Pathways</p>
+                    </div>
+                    <span class="date">Feb 2026 - Mar 2026</span>
                 </div>
-                <div>Scroll Down</div>
+                <ul class="task-list code-list">
+                    <li>Leveraged TensorFlow and Keras to develop high-accuracy Convolutional Neural Networks (CNN) for image classification tasks.</li>
+                    <li>Applied Linear Regression and advanced statistical methods to analyze data trends and predict outcomes.</li>
+                    <li>Implemented complex Data Science pipelines ensuring 30 x 30 normalization for image consistency across training and production environments.</li>
+                </ul>
             </div>
-        </section>
+            
+            <br>
 
-        <!-- About/Contact Section -->
-        <section id="about" class="about section">
-            <h2 class="section-title">Profile <span class="gradient-text">Summary</span></h2>
-            <div class="about-grid">
-                <div class="about-text glass-card fade-in">
-                    <p>
-                        I am a driven software engineer with proven problem-solving abilities demonstrated through academic excellence and practical internship experience. My goal is to bridge the gap between complex algorithms and intuitive user experiences.
-                    </p>
-                    <div class="contact-info mt-4">
-                        <div class="contact-item">
-                            <i class="fas fa-phone-alt"></i>
-                            <span>+92-304 8395531</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>muqeetmahmood80@gmail.com</span>
-                        </div>
+            <div class="glass-card experience-card hover-lift">
+                <div class="mac-buttons"><span></span><span></span><span></span></div>
+                <div class="card-header">
+                    <div class="role-company">
+                        <h3>Software Engineering Intern (Remote)</h3>
+                        <p class="company">Developers Hub Corporation</p>
                     </div>
+                    <span class="date">Apr 2025 - May 2025</span>
                 </div>
+                <ul class="task-list code-list">
+                    <li>Developed a Task Management System using the MERN stack, implementing full CRUD operations.</li>
+                    <li>Engineered a real-time status tracking feature and ensured robust backend data persistence.</li>
+                </ul>
             </div>
-        </section>
+        </div>
+        <h2 class="section-title syntax-closing">];</h2>
+    </section>
 
-        <!-- Education Section -->
-        <section id="education" class="education section">
-            <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
-            <div class="timeline">
-                <div class="timeline-item fade-in">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card">
-                        <div class="timeline-header">
-                            <h3>National University of Computer and Emerging Sciences</h3>
-                            <span class="date">Aug 2024 - 2028</span>
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <h2 class="section-title syntax-heading">function <span class="gradient-text">getProjects</span>() {</h2>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card glass-card hover-lift slide-in-bottom delay-1">
+                <div class="mac-buttons"><span></span><span></span><span></span></div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>Traffic Sign Recognition (50k+ Images)</h3>
+                        <div class="project-links">
+                            <a href="#" target="_blank" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
                         </div>
-                        <h4>Bachelor of Computer Science</h4>
-                        <p class="gpa highlight">CGPA: 2.88</p>
-                        <p class="coursework"><strong>Relevant Coursework:</strong> Data Structures and Algorithms (DSA), Object Oriented Programming (OOP), Programming Fundamentals, Database Systems</p>
                     </div>
-                </div>
-
-                <div class="timeline-item fade-in">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card">
-                        <div class="timeline-header">
-                            <h3>Beaconhouse</h3>
-                            <span class="date">Aug 2021 - Aug 2023</span>
-                        </div>
-                        <h4>A Levels, Computer Science</h4>
-                        <p class="grades highlight">Grades: 3B</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item fade-in">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card">
-                        <div class="timeline-header">
-                            <h3>Lahore Grammar School</h3>
-                            <span class="date">Aug 2019 - Aug 2021</span>
-                        </div>
-                        <h4>O Level, Computer Science</h4>
-                        <p class="grades highlight">Grades: 1A*, 6A, 1B</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="experience section">
-            <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
-            <div class="experience-container fade-in">
-                <div class="glass-card experience-card hover-lift">
-                    <div class="card-header">
-                        <div class="role-company">
-                            <h3>Intern (Remote)</h3>
-                            <p class="company">Developers Hub Corporation</p>
-                        </div>
-                        <span class="date">Apr 2023 - May 2023</span>
-                    </div>
-                    <ul class="task-list">
-                        <li>Developed a Task Management System using the MERN stack during the internship.</li>
-                        <li>Implemented full CRUD operations and real-time status tracking features.</li>
-                        <li>Focused on delivering a clean UI/UX and ensuring robust backend data persistence.</li>
+                    <p class="project-category">Deep Learning</p>
+                    <ul class="task-list code-list">
+                        <li>Architected a Convolutional Neural Network (CNN) to classify 43 traffic sign categories using the GTSRB dataset.</li>
+                        <li>Developed a real-time web application using Streamlit for instant image classification and user interaction.</li>
+                        <li>Optimized model performance using TensorFlow data augmentation techniques to reduce overfitting and improve generalization.</li>
                     </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="projects section">
-            <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card glass-card hover-lift fade-in">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>Traffic Sign Recognition</h3>
-                            <div class="project-links">
-                                <a href="#" target="_blank" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                        <p class="project-category">Deep Learning</p>
-                        <ul class="task-list">
-                            <li>Developed a Deep Neural Network (CNN) to classify 43 categories of traffic signs using the GTSRB dataset.</li>
-                            <li>Optimized model performance using data augmentation and dropout layers to prevent overfitting.</li>
-                            <li>Achieved high validation accuracy, demonstrating proficiency in image classification workflows.</li>
-                        </ul>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">TensorFlow</span>
-                            <span class="tech-tag">Keras</span>
-                            <span class="tech-tag">CNN</span>
-                            <span class="tech-tag">Computer Vision</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card glass-card hover-lift fade-in">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>Student Score Prediction</h3>
-                            <div class="project-links">
-                                <a href="#" target="_blank" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                        <p class="project-category">Machine Learning</p>
-                        <ul class="task-list">
-                            <li>Engineered a supervised learning model to predict academic outcomes based on study metrics.</li>
-                            <li>Utilized Pandas and Matplotlib for Exploratory Data Analysis (EDA) and data visualization.</li>
-                            <li>Applied Linear Regression algorithms and evaluated results using R-squared and MSE metrics.</li>
-                        </ul>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Scikit-learn</span>
-                            <span class="tech-tag">Pandas</span>
-                            <span class="tech-tag">Regression Analysis</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card glass-card hover-lift fade-in">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>Task Management System</h3>
-                            <div class="project-links">
-                                <a href="#" target="_blank" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                        <p class="project-category">MERN Stack</p>
-                        <ul class="task-list">
-                            <li>Built a full-stack web application for task organization featuring a responsive React frontend.</li>
-                            <li>Designed a RESTful API with Node/Express to handle task lifecycles and user data.</li>
-                            <li>Leveraged MongoDB for efficient data storage and retrieval.</li>
-                        </ul>
-                        <div class="tech-stack">
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Express.js</span>
-                            <span class="tech-tag">React.js</span>
-                            <span class="tech-tag">Node.js</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="skills section">
-            <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
-            <div class="skills-grid fade-in">
-                <!-- Skill Category 1 -->
-                <div class="skill-category glass-card hover-lift">
-                    <div class="skill-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3>Core CS</h3>
-                    <div class="skill-tags">
-                        <span class="tech-tag">Data Structures & Algorithms (DSA)</span>
-                        <span class="tech-tag">Object-Oriented Programming (OOP)</span>
-                    </div>
-                </div>
-
-                <!-- Skill Category 2 -->
-                <div class="skill-category glass-card hover-lift">
-                    <div class="skill-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Programming</h3>
-                    <div class="skill-tags">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">C++</span>
-                        <span class="tech-tag">HTML/CSS</span>
-                        <span class="tech-tag">VB.NET</span>
-                    </div>
-                </div>
-
-                <!-- Skill Category 3 -->
-                <div class="skill-category glass-card hover-lift">
-                    <div class="skill-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>AI / ML / Data</h3>
-                    <div class="skill-tags">
+                    <div class="tech-stack">
                         <span class="tech-tag">TensorFlow</span>
                         <span class="tech-tag">Keras</span>
-                        <span class="tech-tag">Scikit-learn</span>
-                        <span class="tech-tag">CNNs</span>
+                        <span class="tech-tag">CNN</span>
+                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">Streamlit</span>
+                        <span class="tech-tag">Python</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card glass-card hover-lift slide-in-bottom delay-2">
+                <div class="mac-buttons"><span></span><span></span><span></span></div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>Interactive Customer Segmentation Tool</h3>
+                        <div class="project-links">
+                            <a href="#" target="_blank" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <p class="project-category">Data Science</p>
+                    <ul class="task-list code-list">
+                        <li>Developed an end-to-end unsupervised learning dashboard to segment retail customers using K-Means and DBSCAN.</li>
+                        <li>Performed Exploratory Data Analysis (EDA) and feature scaling to ensure distance-based algorithms performed accurately.</li>
+                        <li>Designed an interactive UI for real-time hyperparameter tuning of clustering models and outlier detection.</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Scikit-Learn</span>
+                        <span class="tech-tag">Streamlit</span>
                         <span class="tech-tag">Pandas</span>
-                        <span class="tech-tag">NumPy</span>
                         <span class="tech-tag">Matplotlib</span>
                     </div>
                 </div>
+            </div>
 
-                <!-- Skill Category 4 -->
-                <div class="skill-category glass-card hover-lift">
-                    <div class="skill-icon">
-                        <i class="fas fa-laptop-code"></i>
+            <!-- Project 3 -->
+            <div class="project-card glass-card hover-lift slide-in-bottom delay-3">
+                <div class="mac-buttons"><span></span><span></span><span></span></div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>Task Management System | MERN Stack</h3>
+                        <div class="project-links">
+                            <a href="#" target="_blank" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+                        </div>
                     </div>
-                    <h3>Web Development</h3>
-                    <div class="skill-tags">
+                    <p class="project-category">Full Stack Web Dev</p>
+                    <ul class="task-list code-list">
+                        <li>Built a full-stack web application for task organization featuring a responsive React frontend.</li>
+                        <li>Designed a RESTful API with Node/Express to handle task lifecycles and leveraged MongoDB for data storage.</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Express.js</span>
                         <span class="tech-tag">React.js</span>
                         <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">Express.js</span>
-                        <span class="tech-tag">MongoDB</span>
-                        <span class="tech-tag">RESTful APIs</span>
                     </div>
                 </div>
-
-                <!-- Skill Category 5 -->
-                <div class="skill-category glass-card hover-lift">
-                    <div class="skill-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Tools & Databases</h3>
-                    <div class="skill-tags">
-                        <span class="tech-tag">Git</span>
-                        <span class="tech-tag">GitHub</span>
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">File Handling</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <a href="#home" class="logo">MM<span>.</span></a>
-            <p>&copy; 2026 Muqeet Mahmood. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
-    </footer>
+        <h2 class="section-title syntax-closing">}</h2>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <h2 class="section-title syntax-heading">class <span class="gradient-text">Skills</span> {</h2>
+        <div class="skills-grid zoom-in">
+            <!-- Skill Category 1 -->
+            <div class="skill-category glass-card hover-lift">
+                <div class="skill-icon hover-float delay-1">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>AI / ML / Data</h3>
+                <div class="skill-tags">
+                    <span class="tech-tag">TensorFlow</span>
+                    <span class="tech-tag">Keras</span>
+                    <span class="tech-tag">CNN</span>
+                    <span class="tech-tag">Linear Regression</span>
+                    <span class="tech-tag">Data Science</span>
+                    <span class="tech-tag">Cluster Analysis (K-Means/DBSCAN)</span>
+                    <span class="tech-tag">Scikit-learn</span>
+                    <span class="tech-tag">Pandas</span>
+                    <span class="tech-tag">NumPy</span>
+                </div>
+            </div>
+
+            <!-- Skill Category 2 -->
+            <div class="skill-category glass-card hover-lift">
+                <div class="skill-icon hover-float delay-2">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Programming & Web</h3>
+                <div class="skill-tags">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">C++</span>
+                    <span class="tech-tag">React.js</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Express.js</span>
+                    <span class="tech-tag">Streamlit</span>
+                    <span class="tech-tag">RESTful APIs</span>
+                    <span class="tech-tag">HTML/CSS</span>
+                </div>
+            </div>
+
+            <!-- Skill Category 3 -->
+            <div class="skill-category glass-card hover-lift">
+                <div class="skill-icon hover-float delay-3">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Tools & Databases</h3>
+                <div class="skill-tags">
+                    <span class="tech-tag">Git</span>
+                    <span class="tech-tag">GitHub</span>
+                    <span class="tech-tag">OpenCV</span>
+                    <span class="tech-tag">PIL</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">File Handling</span>
+                </div>
+            </div>
+
+            <!-- Skill Category 4 -->
+            <div class="skill-category glass-card hover-lift">
+                <div class="skill-icon hover-float delay-1">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3>Core CS</h3>
+                <div class="skill-tags">
+                    <span class="tech-tag">Data Structures & Algorithms (DSA)</span>
+                    <span class="tech-tag">Object-Oriented Programming (OOP)</span>
+                </div>
+            </div>
+        </div>
+        <h2 class="section-title syntax-closing">}</h2>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education section">
+        <h2 class="section-title syntax-heading">import <span class="gradient-text">Education</span> from './timeline';</h2>
+        <div class="timeline">
+            <div class="timeline-item slide-in-left delay-1">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content glass-card hover-lift">
+                    <div class="mac-buttons"><span></span><span></span><span></span></div>
+                    <div class="timeline-header">
+                        <h3>National University of Computer and Emerging Sciences</h3>
+                        <span class="date">Aug 2024 - 2028</span>
+                    </div>
+                    <h4>Bachelor of Computer Science</h4>
+
+                    <p class="coursework"><strong>Relevant Coursework:</strong> Data Structures and Algorithms
+                        (DSA), Object Oriented Programming (OOP), Database Systems</p>
+                </div>
+            </div>
+
+            <div class="timeline-item slide-in-left delay-2">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content glass-card hover-lift">
+                    <div class="mac-buttons"><span></span><span></span><span></span></div>
+                    <div class="timeline-header">
+                        <h3>Beaconhouse</h3>
+                        <span class="date">Aug 2021 - Aug 2023</span>
+                    </div>
+                    <h4>A Levels, Computer Science</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <a href="#home" class="logo">MM<span>.</span></a>
+        <p>&copy; 2026 Muqeet Mahmood. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://github.com/Muqeet04" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/muqeet-mahmood-30a62b334/" target="_blank" aria-label="LinkedIn"><i
+                    class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
+
 </html>
