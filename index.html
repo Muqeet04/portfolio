@@ -1,357 +1,726 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html class="dark" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muqeet Mahmood | Software Engineer</title>
-    <meta name="description"
-        content="Portfolio of Muqeet Mahmood, a passionate Computer Science student specializing in Data Structures, Machine Learning, and Full Stack development.">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <link rel="stylesheet" href="style.css">
-    <!-- Three.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Muqeet Mahmood | Software Engineer</title>
+<meta name="description" content="Portfolio of Muqeet Mahmood, a passionate Computer Science student specializing in Data Science, Machine Learning, and Full Stack development."/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "surface-dim": "#0b1326",
+          "tertiary": "#d8ffe7",
+          "primary": "#dbfcff",
+          "on-background": "#dae2fd",
+          "error-container": "#93000a",
+          "secondary": "#d0bcff",
+          "on-primary": "#00363a",
+          "surface-tint": "#00dbe9",
+          "surface": "#0b1326",
+          "on-surface-variant": "#b9cacb",
+          "surface-bright": "#31394d",
+          "on-secondary-fixed-variant": "#5516be",
+          "surface-container-low": "#131b2e",
+          "secondary-container": "#571bc1",
+          "tertiary-container": "#65f2b5",
+          "on-secondary-fixed": "#23005c",
+          "on-tertiary-fixed-variant": "#005236",
+          "secondary-fixed-dim": "#d0bcff",
+          "on-tertiary-fixed": "#002113",
+          "tertiary-fixed": "#6ffbbe",
+          "primary-fixed": "#7df4ff",
+          "inverse-surface": "#dae2fd",
+          "secondary-fixed": "#e9ddff",
+          "tertiary-fixed-dim": "#4edea3",
+          "background": "#0b1326",
+          "primary-fixed-dim": "#00dbe9",
+          "on-primary-fixed-variant": "#004f54",
+          "error": "#ffb4ab",
+          "on-tertiary": "#003824",
+          "primary-container": "#00f0ff",
+          "surface-container-highest": "#2d3449",
+          "surface-variant": "#2d3449",
+          "surface-container": "#171f33",
+          "on-tertiary-container": "#006d4a",
+          "on-primary-fixed": "#002022",
+          "outline-variant": "#3b494b",
+          "outline": "#849495",
+          "on-secondary-container": "#c4abff",
+          "on-error": "#690005",
+          "on-secondary": "#3c0091",
+          "surface-container-high": "#222a3d",
+          "on-surface": "#dae2fd",
+          "inverse-on-surface": "#283044",
+          "on-error-container": "#ffdad6",
+          "on-primary-container": "#006970",
+          "inverse-primary": "#006970",
+          "surface-container-lowest": "#060e20"
+        },
+        fontFamily: {
+          "headline": ["Space Grotesk"],
+          "body": ["Inter"],
+          "label": ["Space Grotesk"]
+        },
+        borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+      },
+    },
+  }
+</script>
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  }
+  .neural-gradient {
+    background: linear-gradient(135deg, #dbfcff 0%, #00dbe9 100%);
+  }
+  .glow-pulse {
+    box-shadow: 0 0 48px rgba(219, 252, 255, 0.05);
+  }
+  .neural-glow {
+    box-shadow: 0 0 48px rgba(219, 252, 255, 0.05);
+  }
+  .neural-pulse {
+    box-shadow: 0 0 15px 2px rgba(0, 240, 255, 0.3);
+  }
+  .glass-card {
+    backdrop-filter: blur(12px);
+  }
+  .accent-bar {
+    width: 2px;
+    height: 0;
+    transition: height 0.3s ease;
+  }
+  .project-card:hover .accent-bar {
+    height: 100%;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  /* Mobile menu */
+  #mobile-menu {
+    display: none;
+  }
+  #mobile-menu.open {
+    display: flex;
+  }
+</style>
 </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
 
-<body>
-<!-- 3D Background Canvas -->
-<canvas id="canvas-3d"></canvas>
-
-<!-- Custom Cursor -->
-<div class="cursor-dot" data-cursor-dot></div>
-<div class="cursor-outline" data-cursor-outline></div>
-
-<!-- Scroll Progress -->
-<div id="scroll-progress"></div>
-
-<!-- Navigation -->
-<nav class="navbar" id="navbar">
-    <div class="nav-content">
-        <a href="#home" class="logo">MM<span>.</span></a>
-        <div class="nav-links">
-            <a href="#about" class="nav-link">About</a>
-            <a href="#experience" class="nav-link">Experience</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <a href="#skills" class="nav-link">Skills</a>
-            <a href="#education" class="nav-link">Education</a>
-        </div>
-        <button class="mobile-menu-btn">
-            <i class="fas fa-bars"></i>
-        </button>
+<!-- ===================== NAV ===================== -->
+<nav class="fixed top-0 w-full z-50 bg-[#0b1326]/80 backdrop-blur-xl shadow-[0_0_20px_rgba(0,240,255,0.05)]">
+  <div class="bg-gradient-to-b from-[#131b2e] to-transparent">
+    <div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+      <div class="text-2xl font-black tracking-tighter text-[#dbfcff] font-headline uppercase">MM<span class="text-[#00F0FF]">.</span></div>
+      <div class="hidden md:flex gap-10">
+        <a class="nav-link font-headline tracking-tight text-sm uppercase font-bold transition-colors duration-300 hover:text-[#dbfcff]" href="#intro" data-section="intro">Intro</a>
+        <a class="nav-link font-headline tracking-tight text-sm uppercase font-bold transition-colors duration-300 hover:text-[#dbfcff]" href="#projects" data-section="projects">Projects</a>
+        <a class="nav-link font-headline tracking-tight text-sm uppercase font-bold transition-colors duration-300 hover:text-[#dbfcff]" href="#skills" data-section="skills">Skills</a>
+        <a class="nav-link font-headline tracking-tight text-sm uppercase font-bold transition-colors duration-300 hover:text-[#dbfcff]" href="#education" data-section="education">Education</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="mailto:muqeetmahmood80@gmail.com" class="bg-gradient-to-br from-primary to-primary-fixed-dim text-on-primary px-6 py-2 rounded-md font-headline font-bold text-sm uppercase tracking-wider active:scale-95 transition-all shadow-[0_0_15px_rgba(0,240,255,0.2)]">
+          Contact
+        </a>
+        <button id="mobile-menu-btn" class="md:hidden text-[#dbfcff] text-2xl leading-none">&#9776;</button>
+      </div>
     </div>
+    <!-- Mobile dropdown -->
+    <div id="mobile-menu" class="flex-col gap-4 px-8 pb-6 md:hidden">
+      <a class="nav-link font-headline text-sm uppercase font-bold text-[#31394d] hover:text-[#dbfcff] transition-colors" href="#intro" data-section="intro">Intro</a>
+      <a class="nav-link font-headline text-sm uppercase font-bold text-[#31394d] hover:text-[#dbfcff] transition-colors" href="#projects" data-section="projects">Projects</a>
+      <a class="nav-link font-headline text-sm uppercase font-bold text-[#31394d] hover:text-[#dbfcff] transition-colors" href="#skills" data-section="skills">Skills</a>
+      <a class="nav-link font-headline text-sm uppercase font-bold text-[#31394d] hover:text-[#dbfcff] transition-colors" href="#education" data-section="education">Education</a>
+    </div>
+  </div>
 </nav>
 
 <main>
-    <section id="home" class="hero section">
-        <div class="glow-bg"></div>
 
-        <!-- Floating Decorative Elements -->
-        <div class="floating-orb orb-1"></div>
-        <div class="floating-orb orb-2"></div>
-        <div class="floating-orb orb-3"></div>
+<!-- ===================== INTRO ===================== -->
+<section id="intro" class="relative min-h-screen pt-20 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-8 py-20 lg:py-32 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <!-- Content Left -->
+    <div class="lg:col-span-7 flex flex-col items-start gap-8">
+      <div class="flex items-center gap-3 py-1 px-3 bg-surface-container-high rounded-full border border-outline-variant/10">
+        <span class="w-2 h-2 rounded-full bg-tertiary shadow-[0_0_8px_#d8ffe7]"></span>
+        <span class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant font-semibold">Available for Opportunities</span>
+      </div>
+      <h1 class="font-headline text-6xl md:text-8xl font-black tracking-tighter text-on-surface leading-[0.9] lg:max-w-2xl">
+        MUQEET <span class="text-primary italic">MAHMOOD</span>.
+      </h1>
+      <p class="font-body text-on-surface-variant text-lg leading-relaxed max-w-xl">
+        Computer Science student specializing in Data Science &amp; AI. I build Deep Learning models with TensorFlow and deploy real-time applications via Streamlit and the MERN stack.
+      </p>
+      <div class="flex flex-wrap gap-6 mt-4">
+        <a href="mailto:muqeetmahmood80@gmail.com" class="neural-gradient text-on-primary px-8 py-4 rounded-md font-headline font-bold uppercase tracking-widest text-sm hover:scale-[1.02] active:scale-95 transition-all glow-pulse">
+          Get in Touch
+        </a>
+        <a href="#projects" class="bg-transparent border border-outline-variant/20 text-primary px-8 py-4 rounded-md font-headline font-bold uppercase tracking-widest text-sm hover:bg-surface-container transition-all">
+          View Projects
+        </a>
+      </div>
+      <div class="mt-12 flex gap-12 border-t border-outline-variant/10 pt-8 w-full max-w-md">
+        <div class="flex flex-col">
+          <span class="font-headline font-black text-2xl text-primary">2+</span>
+          <span class="font-label text-[10px] uppercase tracking-widest text-outline">Internships</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-headline font-black text-2xl text-primary">3+</span>
+          <span class="font-label text-[10px] uppercase tracking-widest text-outline">Projects</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-headline font-black text-2xl text-primary">50k+</span>
+          <span class="font-label text-[10px] uppercase tracking-widest text-outline">Images Trained</span>
+        </div>
+      </div>
+      <!-- Social Links -->
+      <div class="flex gap-4">
+        <a href="https://github.com/Muqeet04" target="_blank" class="flex items-center gap-2 text-outline hover:text-primary transition-colors font-label text-xs uppercase tracking-widest font-bold">
+          <span class="material-symbols-outlined text-base">code</span> GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/muqeet-mahmood-30a62b334/" target="_blank" class="flex items-center gap-2 text-outline hover:text-primary transition-colors font-label text-xs uppercase tracking-widest font-bold">
+          <span class="material-symbols-outlined text-base">person</span> LinkedIn
+        </a>
+      </div>
+    </div>
+    <!-- Visual Right: code block decoration -->
+    <div class="lg:col-span-5 relative flex items-center justify-center">
+      <div class="w-full rounded-xl bg-surface-container-low border border-outline-variant/10 p-8 font-mono text-sm leading-relaxed">
+        <div class="flex gap-2 mb-6">
+          <span class="w-3 h-3 rounded-full bg-[#ff5f56]"></span>
+          <span class="w-3 h-3 rounded-full bg-[#ffbd2e]"></span>
+          <span class="w-3 h-3 rounded-full bg-[#27c93f]"></span>
+        </div>
+        <p><span class="text-secondary">const</span> <span class="text-primary-fixed">muqeet</span> <span class="text-outline">=</span> <span class="text-outline">{</span></p>
+        <p class="pl-6"><span class="text-tertiary">role</span><span class="text-outline">:</span> <span class="text-[#a5d6a7]">"Software Engineer"</span><span class="text-outline">,</span></p>
+        <p class="pl-6"><span class="text-tertiary">focus</span><span class="text-outline">:</span> <span class="text-[#a5d6a7]">"Data Science &amp; AI"</span><span class="text-outline">,</span></p>
+        <p class="pl-6"><span class="text-tertiary">stack</span><span class="text-outline">: [</span></p>
+        <p class="pl-12"><span class="text-[#a5d6a7]">"TensorFlow"</span><span class="text-outline">,</span></p>
+        <p class="pl-12"><span class="text-[#a5d6a7]">"React.js"</span><span class="text-outline">,</span></p>
+        <p class="pl-12"><span class="text-[#a5d6a7]">"Node.js"</span><span class="text-outline">,</span></p>
+        <p class="pl-12"><span class="text-[#a5d6a7]">"Python"</span></p>
+        <p class="pl-6"><span class="text-outline">],</span></p>
+        <p class="pl-6"><span class="text-tertiary">status</span><span class="text-outline">:</span> <span class="text-[#a5d6a7]">"Open to opportunities"</span></p>
+        <p><span class="text-outline">};</span></p>
+        <p class="mt-4 text-outline-variant text-xs">// muqeetmahmood80@gmail.com</p>
+      </div>
+      <div class="absolute -top-12 -right-12 w-64 h-64 bg-primary/5 blur-[120px] rounded-full pointer-events-none"></div>
+      <div class="absolute -bottom-12 -left-12 w-48 h-48 bg-secondary/5 blur-[100px] rounded-full pointer-events-none"></div>
+    </div>
+  </div>
+  <!-- Core Technologies row -->
+  <div class="max-w-7xl mx-auto px-8 pb-20 overflow-hidden">
+    <div class="flex gap-4 items-center mb-6">
+      <span class="font-label text-[10px] uppercase tracking-widest text-outline">Core Technologies</span>
+      <div class="h-[1px] flex-grow bg-outline-variant/10"></div>
+    </div>
+    <div class="flex flex-wrap gap-4 opacity-70 hover:opacity-100 transition-opacity">
+      <div class="bg-surface-container px-4 py-2 rounded-md border border-outline-variant/10 font-mono text-xs text-on-surface-variant">TensorFlow</div>
+      <div class="bg-surface-container px-4 py-2 rounded-md border border-outline-variant/10 font-mono text-xs text-on-surface-variant">Keras</div>
+      <div class="bg-surface-container px-4 py-2 rounded-md border border-outline-variant/10 font-mono text-xs text-on-surface-variant">Scikit-Learn</div>
+      <div class="bg-surface-container px-4 py-2 rounded-md border border-outline-variant/10 font-mono text-xs text-on-surface-variant">React.js</div>
+      <div class="bg-surface-container px-4 py-2 rounded-md border border-outline-variant/10 font-mono text-xs text-on-surface-variant">Node.js</div>
+      <div class="bg-surface-container px-4 py-2 rounded-md border border-outline-variant/10 font-mono text-xs text-on-surface-variant">Streamlit</div>
+      <div class="bg-surface-container px-4 py-2 rounded-md border border-outline-variant/10 font-mono text-xs text-on-surface-variant">Python</div>
+      <div class="bg-surface-container px-4 py-2 rounded-md border border-outline-variant/10 font-mono text-xs text-on-surface-variant">MongoDB</div>
+    </div>
+  </div>
+</section>
 
-        <div class="hero-content">
-            <p class="greeting slide-up">Hello World, I'm</p>
-            <h1 class="name slide-up-delay-1">Muqeet <span class="gradient-text">Mahmood</span></h1>
-            <h2 class="title slide-up-delay-2">Software Engineer & Data Scientist</h2>
-            <p class="summary slide-up-delay-3">
-                Passionate Computer Science student specialized in Data Science and Artificial Intelligence. Experienced in building Deep Learning models using TensorFlow and developing unsupervised learning dashboards. Proven ability to bridge the gap between model training and real-time application deployment via Streamlit and MERN stack.
+<!-- ===================== PROJECTS ===================== -->
+<section id="projects" class="py-24 px-8 max-w-7xl mx-auto">
+  <header class="mb-20">
+    <div class="flex items-center gap-4 mb-4">
+      <span class="h-[1px] w-12 bg-primary/30"></span>
+      <span class="font-label text-primary tracking-[0.3em] text-[10px] uppercase font-bold">Portfolio Index</span>
+    </div>
+    <h2 class="font-headline text-5xl md:text-7xl font-black tracking-tighter text-primary leading-tight max-w-4xl">
+      ENGINEERED<br/>SYSTEMS.
+    </h2>
+    <p class="mt-8 text-on-surface-variant max-w-xl text-lg leading-relaxed">
+      A showcase of deep learning models, data science dashboards, and full-stack applications.
+    </p>
+  </header>
+
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+    <!-- Project 1: Traffic Sign Recognition -->
+    <div class="md:col-span-8 group relative project-card bg-surface-container-low overflow-hidden rounded-md transition-all duration-500 hover:bg-surface-container-high neural-glow">
+      <div class="absolute left-0 top-0 accent-bar bg-primary"></div>
+      <div class="flex flex-col md:flex-row h-full">
+        <div class="flex-1 p-8 md:p-12 flex flex-col justify-between">
+          <div>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="bg-surface-container-highest px-3 py-1 text-[10px] font-label font-bold tracking-widest text-secondary uppercase rounded-full">TensorFlow</span>
+              <span class="bg-surface-container-highest px-3 py-1 text-[10px] font-label font-bold tracking-widest text-secondary uppercase rounded-full">CNN</span>
+              <span class="bg-surface-container-highest px-3 py-1 text-[10px] font-label font-bold tracking-widest text-secondary uppercase rounded-full">Streamlit</span>
+            </div>
+            <h3 class="font-headline text-3xl font-bold tracking-tight text-primary mb-4">Traffic Sign Recognition (50k+ Images)</h3>
+            <p class="text-on-surface-variant text-sm leading-loose max-w-md">
+              Architected a CNN to classify 43 traffic sign categories using the GTSRB dataset. Built a real-time Streamlit web app for instant image classification, with TensorFlow data augmentation to reduce overfitting.
             </p>
-            <div class="cta-group slide-up-delay-4">
-                <a href="mailto:muqeetmahmood80@gmail.com" class="btn btn-primary magnetic">
-                    <i class="fas fa-envelope"></i> Get In Touch
+          </div>
+          <div class="mt-12 flex items-center gap-8">
+            <a class="flex items-center gap-2 group/link text-primary font-label text-xs font-bold tracking-widest uppercase" href="#">
+              GitHub <span class="material-symbols-outlined text-lg group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+        <div class="w-full md:w-2/5 min-h-[240px] relative overflow-hidden bg-surface-container flex items-center justify-center">
+          <span class="material-symbols-outlined text-outline-variant/30 text-[8rem]">traffic</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2: Customer Segmentation -->
+    <div class="md:col-span-4 group relative project-card bg-surface-container-low overflow-hidden rounded-md transition-all duration-500 hover:bg-surface-container-high neural-glow">
+      <div class="absolute left-0 top-0 accent-bar bg-primary"></div>
+      <div class="p-8 h-full flex flex-col">
+        <div class="mb-8">
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="bg-surface-container-highest px-3 py-1 text-[10px] font-label font-bold tracking-widest text-secondary uppercase rounded-full">Scikit-Learn</span>
+            <span class="bg-surface-container-highest px-3 py-1 text-[10px] font-label font-bold tracking-widest text-secondary uppercase rounded-full">K-Means</span>
+          </div>
+          <h3 class="font-headline text-2xl font-bold tracking-tight text-primary mb-4">Interactive Customer Segmentation Tool</h3>
+          <p class="text-on-surface-variant text-sm leading-relaxed">
+            End-to-end unsupervised learning dashboard segmenting retail customers using K-Means and DBSCAN, with real-time hyperparameter tuning UI.
+          </p>
+        </div>
+        <div class="mt-auto flex flex-col gap-4">
+          <a class="flex items-center justify-between group/link text-primary font-label text-xs font-bold tracking-widest uppercase border border-outline-variant/20 p-4 rounded-md hover:bg-primary/5 transition-all" href="#">
+            View on GitHub <span class="material-symbols-outlined text-lg">open_in_new</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3: Task Management System -->
+    <div class="md:col-span-12 group relative project-card bg-surface-container-low overflow-hidden rounded-md transition-all duration-500 hover:bg-surface-container-high neural-glow">
+      <div class="absolute left-0 top-0 accent-bar bg-primary"></div>
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="w-full md:w-1/3 p-8 md:p-12 border-b md:border-b-0 md:border-r border-outline-variant/10">
+          <div class="font-mono text-[10px] text-outline mb-4">FULL_STACK: MERN</div>
+          <h3 class="font-headline text-3xl font-bold tracking-tight text-primary mb-2">Task Management System</h3>
+          <span class="text-tertiary font-label text-[10px] font-bold tracking-widest uppercase">CRUD · REST API · React</span>
+        </div>
+        <div class="flex-1 p-8 md:p-12">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <p class="text-on-surface-variant text-sm leading-loose">
+              Full-stack web application for task organization with a responsive React frontend, RESTful Node/Express API, and MySQL for data persistence. Features real-time status tracking.
+            </p>
+            <div class="flex flex-col justify-end">
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="bg-surface-container-highest px-3 py-1 text-[10px] font-label font-bold tracking-widest text-secondary uppercase rounded-full">MySQL</span>
+                <span class="bg-surface-container-highest px-3 py-1 text-[10px] font-label font-bold tracking-widest text-secondary uppercase rounded-full">Express.js</span>
+                <span class="bg-surface-container-highest px-3 py-1 text-[10px] font-label font-bold tracking-widest text-secondary uppercase rounded-full">React.js</span>
+                <span class="bg-surface-container-highest px-3 py-1 text-[10px] font-label font-bold tracking-widest text-secondary uppercase rounded-full">Node.js</span>
+              </div>
+              <div class="flex gap-6">
+                <a class="text-primary font-label text-xs font-bold tracking-widest uppercase flex items-center gap-2" href="#">
+                  GitHub <span class="w-1.5 h-1.5 rounded-full bg-tertiary shadow-[0_0_8px_#6ffbbe]"></span>
                 </a>
-                <div class="social-links">
-                    <a href="https://github.com/Muqeet04" target="_blank" aria-label="GitHub" class="magnetic"><i
-                            class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/muqeet-mahmood-30a62b334/" target="_blank"
-                        aria-label="LinkedIn" class="magnetic"><i class="fab fa-linkedin-in"></i></a>
-                </div>
+              </div>
             </div>
+          </div>
         </div>
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <div>Scroll Down</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SKILLS ===================== -->
+<section id="skills" class="py-24 px-8 max-w-7xl mx-auto">
+  <header class="mb-20">
+    <div class="inline-flex items-center gap-2 mb-4 px-3 py-1 bg-surface-container-high rounded-full border border-outline-variant/10">
+      <span class="w-2 h-2 rounded-full bg-tertiary animate-pulse shadow-[0_0_8px_#d8ffe7]"></span>
+      <span class="text-[10px] font-label font-bold tracking-[0.2em] text-tertiary-fixed uppercase">System Capabilities</span>
+    </div>
+    <h2 class="font-headline text-6xl md:text-8xl font-black tracking-tighter text-primary mb-6">
+      TECH_<br/>STACK
+    </h2>
+    <p class="max-w-2xl text-on-surface-variant text-lg leading-relaxed">
+      A curated ecosystem of languages, frameworks, and tools for scalable AI systems and full-stack applications.
+    </p>
+  </header>
+
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+    <!-- AI / ML Frameworks -->
+    <div class="md:col-span-8 bg-surface-container-low p-8 rounded-lg relative overflow-hidden group border-l-2 border-transparent hover:border-primary transition-all duration-500">
+      <div class="flex justify-between items-start mb-12">
+        <div>
+          <h3 class="font-headline text-3xl font-bold text-primary-fixed tracking-tight">AI / ML Frameworks</h3>
+          <p class="text-xs font-label text-outline uppercase tracking-widest mt-1">Intelligence &amp; Computation</p>
         </div>
-    </section>
-
-    <!-- About/Contact Section -->
-    <section id="about" class="about section">
-        <h2 class="section-title syntax-heading">&lt;Profile <span class="gradient-text">/</span>&gt;</h2>
-        <div class="about-grid profile-highlight zoom-in">
-            <div class="about-text glass-card">
-                <div class="mac-buttons"><span></span><span></span><span></span></div>
-                <p>
-                    Passionate Computer Science student specialized in <strong class="highlight">Data Science</strong> and <strong class="highlight">Artificial Intelligence</strong>. Experienced in building Deep Learning models using TensorFlow and developing unsupervised learning dashboards. Proven ability to bridge the gap between model training and real-time application deployment via Streamlit and MERN stack.
-                </p>
-                <div class="contact-info mt-4">
-                    <div class="contact-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <span>+92-304 8395531</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>muqeetmahmood80@gmail.com</span>
-                    </div>
-                </div>
-            </div>
+        <span class="material-symbols-outlined text-primary/40 text-4xl">neurology</span>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-secondary">hub</span>
+            <span class="font-headline font-bold text-on-surface">TensorFlow</span>
+          </div>
+          <div class="h-1 bg-surface-container-highest rounded-full overflow-hidden">
+            <div class="h-full w-[88%] bg-tertiary-fixed-dim neural-pulse"></div>
+          </div>
+          <p class="text-[10px] font-label text-outline uppercase tracking-tighter">Deep Learning · 88%</p>
         </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience section">
-        <h2 class="section-title syntax-heading">const <span class="gradient-text">experience</span> = [</h2>
-        <div class="experience-container slide-in-left">
-            <div class="glass-card experience-card hover-lift">
-                <div class="mac-buttons"><span></span><span></span><span></span></div>
-                <div class="card-header">
-                    <div class="role-company">
-                        <h3>Data Science Intern (Remote)</h3>
-                        <p class="company">Elevvo Pathways</p>
-                    </div>
-                    <span class="date">Feb 2026 - Mar 2026</span>
-                </div>
-                <ul class="task-list code-list">
-                    <li>Leveraged TensorFlow and Keras to develop high-accuracy Convolutional Neural Networks (CNN) for image classification tasks.</li>
-                    <li>Applied Linear Regression and advanced statistical methods to analyze data trends and predict outcomes.</li>
-                    <li>Implemented complex Data Science pipelines ensuring 30 x 30 normalization for image consistency across training and production environments.</li>
-                </ul>
-            </div>
-            
-            <br>
-
-            <div class="glass-card experience-card hover-lift">
-                <div class="mac-buttons"><span></span><span></span><span></span></div>
-                <div class="card-header">
-                    <div class="role-company">
-                        <h3>Software Engineering Intern (Remote)</h3>
-                        <p class="company">Developers Hub Corporation</p>
-                    </div>
-                    <span class="date">Apr 2025 - May 2025</span>
-                </div>
-                <ul class="task-list code-list">
-                    <li>Developed a Task Management System using the MERN stack, implementing full CRUD operations.</li>
-                    <li>Engineered a real-time status tracking feature and ensured robust backend data persistence.</li>
-                </ul>
-            </div>
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-secondary">query_stats</span>
+            <span class="font-headline font-bold text-on-surface">Scikit-Learn</span>
+          </div>
+          <div class="h-1 bg-surface-container-highest rounded-full overflow-hidden">
+            <div class="h-full w-[85%] bg-tertiary-fixed-dim neural-pulse"></div>
+          </div>
+          <p class="text-[10px] font-label text-outline uppercase tracking-tighter">Classical ML · 85%</p>
         </div>
-        <h2 class="section-title syntax-closing">];</h2>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects section">
-        <h2 class="section-title syntax-heading">function <span class="gradient-text">getProjects</span>() {</h2>
-        <div class="projects-grid">
-            <!-- Project 1 -->
-            <div class="project-card glass-card hover-lift slide-in-bottom delay-1">
-                <div class="mac-buttons"><span></span><span></span><span></span></div>
-                <div class="project-content">
-                    <div class="project-header">
-                        <h3>Traffic Sign Recognition (50k+ Images)</h3>
-                        <div class="project-links">
-                            <a href="#" target="_blank" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <p class="project-category">Deep Learning</p>
-                    <ul class="task-list code-list">
-                        <li>Architected a Convolutional Neural Network (CNN) to classify 43 traffic sign categories using the GTSRB dataset.</li>
-                        <li>Developed a real-time web application using Streamlit for instant image classification and user interaction.</li>
-                        <li>Optimized model performance using TensorFlow data augmentation techniques to reduce overfitting and improve generalization.</li>
-                    </ul>
-                    <div class="tech-stack">
-                        <span class="tech-tag">TensorFlow</span>
-                        <span class="tech-tag">Keras</span>
-                        <span class="tech-tag">CNN</span>
-                        <span class="tech-tag">OpenCV</span>
-                        <span class="tech-tag">Streamlit</span>
-                        <span class="tech-tag">Python</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="project-card glass-card hover-lift slide-in-bottom delay-2">
-                <div class="mac-buttons"><span></span><span></span><span></span></div>
-                <div class="project-content">
-                    <div class="project-header">
-                        <h3>Interactive Customer Segmentation Tool</h3>
-                        <div class="project-links">
-                            <a href="#" target="_blank" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <p class="project-category">Data Science</p>
-                    <ul class="task-list code-list">
-                        <li>Developed an end-to-end unsupervised learning dashboard to segment retail customers using K-Means and DBSCAN.</li>
-                        <li>Performed Exploratory Data Analysis (EDA) and feature scaling to ensure distance-based algorithms performed accurately.</li>
-                        <li>Designed an interactive UI for real-time hyperparameter tuning of clustering models and outlier detection.</li>
-                    </ul>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Scikit-Learn</span>
-                        <span class="tech-tag">Streamlit</span>
-                        <span class="tech-tag">Pandas</span>
-                        <span class="tech-tag">Matplotlib</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="project-card glass-card hover-lift slide-in-bottom delay-3">
-                <div class="mac-buttons"><span></span><span></span><span></span></div>
-                <div class="project-content">
-                    <div class="project-header">
-                        <h3>Task Management System | MERN Stack</h3>
-                        <div class="project-links">
-                            <a href="#" target="_blank" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <p class="project-category">Full Stack Web Dev</p>
-                    <ul class="task-list code-list">
-                        <li>Built a full-stack web application for task organization featuring a responsive React frontend.</li>
-                        <li>Designed a RESTful API with Node/Express to handle task lifecycles and leveraged MongoDB for data storage.</li>
-                    </ul>
-                    <div class="tech-stack">
-                        <span class="tech-tag">MongoDB</span>
-                        <span class="tech-tag">Express.js</span>
-                        <span class="tech-tag">React.js</span>
-                        <span class="tech-tag">Node.js</span>
-                    </div>
-                </div>
-            </div>
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-secondary">deployed_code</span>
+            <span class="font-headline font-bold text-on-surface">Pandas / NumPy</span>
+          </div>
+          <div class="h-1 bg-surface-container-highest rounded-full overflow-hidden">
+            <div class="h-full w-[90%] bg-tertiary-fixed-dim neural-pulse"></div>
+          </div>
+          <p class="text-[10px] font-label text-outline uppercase tracking-tighter">Data Analysis · 90%</p>
         </div>
-        <h2 class="section-title syntax-closing">}</h2>
-    </section>
+      </div>
+      <div class="mt-12 flex flex-wrap gap-2">
+        <span class="px-3 py-1 bg-surface-container text-[10px] font-label font-bold text-primary-fixed-dim border border-outline-variant/20 rounded">CNN</span>
+        <span class="px-3 py-1 bg-surface-container text-[10px] font-label font-bold text-primary-fixed-dim border border-outline-variant/20 rounded">LINEAR REGRESSION</span>
+        <span class="px-3 py-1 bg-surface-container text-[10px] font-label font-bold text-primary-fixed-dim border border-outline-variant/20 rounded">K-MEANS / DBSCAN</span>
+        <span class="px-3 py-1 bg-surface-container text-[10px] font-label font-bold text-primary-fixed-dim border border-outline-variant/20 rounded">COMPUTER VISION</span>
+      </div>
+    </div>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills section">
-        <h2 class="section-title syntax-heading">class <span class="gradient-text">Skills</span> {</h2>
-        <div class="skills-grid zoom-in">
-            <!-- Skill Category 1 -->
-            <div class="skill-category glass-card hover-lift">
-                <div class="skill-icon hover-float delay-1">
-                    <i class="fas fa-brain"></i>
-                </div>
-                <h3>AI / ML / Data</h3>
-                <div class="skill-tags">
-                    <span class="tech-tag">TensorFlow</span>
-                    <span class="tech-tag">Keras</span>
-                    <span class="tech-tag">CNN</span>
-                    <span class="tech-tag">Linear Regression</span>
-                    <span class="tech-tag">Data Science</span>
-                    <span class="tech-tag">Cluster Analysis (K-Means/DBSCAN)</span>
-                    <span class="tech-tag">Scikit-learn</span>
-                    <span class="tech-tag">Pandas</span>
-                    <span class="tech-tag">NumPy</span>
-                </div>
-            </div>
+    <!-- Languages -->
+    <div class="md:col-span-4 bg-surface-container p-8 rounded-lg border-l-2 border-transparent hover:border-primary transition-all duration-500">
+      <div class="flex justify-between items-start mb-8">
+        <h3 class="font-headline text-2xl font-bold text-primary-fixed tracking-tight">Languages</h3>
+        <span class="material-symbols-outlined text-outline">terminal</span>
+      </div>
+      <ul class="space-y-6">
+        <li class="flex items-center justify-between group/lang">
+          <div class="flex items-center gap-3">
+            <span class="text-xs font-label text-outline-variant">01</span>
+            <span class="font-headline font-bold text-lg group-hover/lang:text-primary transition-colors">Python</span>
+          </div>
+          <span class="text-[10px] font-label bg-secondary-container/30 text-secondary-fixed px-2 py-0.5 rounded-full uppercase">Advanced</span>
+        </li>
+        <li class="flex items-center justify-between group/lang">
+          <div class="flex items-center gap-3">
+            <span class="text-xs font-label text-outline-variant">02</span>
+            <span class="font-headline font-bold text-lg group-hover/lang:text-primary transition-colors">JavaScript</span>
+          </div>
+          <span class="text-[10px] font-label bg-secondary-container/30 text-secondary-fixed px-2 py-0.5 rounded-full uppercase">Proficient</span>
+        </li>
+        <li class="flex items-center justify-between group/lang">
+          <div class="flex items-center gap-3">
+            <span class="text-xs font-label text-outline-variant">03</span>
+            <span class="font-headline font-bold text-lg group-hover/lang:text-primary transition-colors">C++</span>
+          </div>
+          <span class="text-[10px] font-label bg-secondary-container/30 text-secondary-fixed px-2 py-0.5 rounded-full uppercase">Intermediate</span>
+        </li>
+        <li class="flex items-center justify-between group/lang">
+          <div class="flex items-center gap-3">
+            <span class="text-xs font-label text-outline-variant">04</span>
+            <span class="font-headline font-bold text-lg group-hover/lang:text-primary transition-colors">HTML / CSS</span>
+          </div>
+          <span class="text-[10px] font-label bg-secondary-container/30 text-secondary-fixed px-2 py-0.5 rounded-full uppercase">Proficient</span>
+        </li>
+      </ul>
+    </div>
 
-            <!-- Skill Category 2 -->
-            <div class="skill-category glass-card hover-lift">
-                <div class="skill-icon hover-float delay-2">
-                    <i class="fas fa-code"></i>
-                </div>
-                <h3>Programming & Web</h3>
-                <div class="skill-tags">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">JavaScript</span>
-                    <span class="tech-tag">C++</span>
-                    <span class="tech-tag">React.js</span>
-                    <span class="tech-tag">Node.js</span>
-                    <span class="tech-tag">Express.js</span>
-                    <span class="tech-tag">Streamlit</span>
-                    <span class="tech-tag">RESTful APIs</span>
-                    <span class="tech-tag">HTML/CSS</span>
-                </div>
-            </div>
-
-            <!-- Skill Category 3 -->
-            <div class="skill-category glass-card hover-lift">
-                <div class="skill-icon hover-float delay-3">
-                    <i class="fas fa-tools"></i>
-                </div>
-                <h3>Tools & Databases</h3>
-                <div class="skill-tags">
-                    <span class="tech-tag">Git</span>
-                    <span class="tech-tag">GitHub</span>
-                    <span class="tech-tag">OpenCV</span>
-                    <span class="tech-tag">PIL</span>
-                    <span class="tech-tag">MongoDB</span>
-                    <span class="tech-tag">MySQL</span>
-                    <span class="tech-tag">File Handling</span>
-                </div>
-            </div>
-
-            <!-- Skill Category 4 -->
-            <div class="skill-category glass-card hover-lift">
-                <div class="skill-icon hover-float delay-1">
-                    <i class="fas fa-server"></i>
-                </div>
-                <h3>Core CS</h3>
-                <div class="skill-tags">
-                    <span class="tech-tag">Data Structures & Algorithms (DSA)</span>
-                    <span class="tech-tag">Object-Oriented Programming (OOP)</span>
-                </div>
-            </div>
+    <!-- Tools & Databases -->
+    <div class="md:col-span-5 bg-surface-container p-8 rounded-lg border-l-2 border-transparent hover:border-primary transition-all duration-500">
+      <div class="mb-8">
+        <h3 class="font-headline text-2xl font-bold text-primary-fixed tracking-tight">Tools &amp; Databases</h3>
+        <p class="text-[10px] font-label text-outline uppercase tracking-widest mt-1">The Substrate</p>
+      </div>
+      <div class="space-y-8">
+        <div class="flex items-start gap-4">
+          <div class="p-3 bg-surface-container-highest rounded-lg">
+            <span class="material-symbols-outlined text-primary-fixed">database</span>
+          </div>
+          <div>
+            <h4 class="font-headline font-bold text-on-surface">MongoDB &amp; MySQL</h4>
+            <p class="text-xs text-on-surface-variant leading-relaxed mt-1">NoSQL and relational database design, schema modeling, and query optimization.</p>
+          </div>
         </div>
-        <h2 class="section-title syntax-closing">}</h2>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="education section">
-        <h2 class="section-title syntax-heading">import <span class="gradient-text">Education</span> from './timeline';</h2>
-        <div class="timeline">
-            <div class="timeline-item slide-in-left delay-1">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content glass-card hover-lift">
-                    <div class="mac-buttons"><span></span><span></span><span></span></div>
-                    <div class="timeline-header">
-                        <h3>National University of Computer and Emerging Sciences</h3>
-                        <span class="date">Aug 2024 - 2028</span>
-                    </div>
-                    <h4>Bachelor of Computer Science</h4>
-
-                    <p class="coursework"><strong>Relevant Coursework:</strong> Data Structures and Algorithms
-                        (DSA), Object Oriented Programming (OOP), Database Systems</p>
-                </div>
-            </div>
-
-            <div class="timeline-item slide-in-left delay-2">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content glass-card hover-lift">
-                    <div class="mac-buttons"><span></span><span></span><span></span></div>
-                    <div class="timeline-header">
-                        <h3>Beaconhouse</h3>
-                        <span class="date">Aug 2021 - Aug 2023</span>
-                    </div>
-                    <h4>A Levels, Computer Science</h4>
-                </div>
-            </div>
+        <div class="flex items-start gap-4">
+          <div class="p-3 bg-surface-container-highest rounded-lg">
+            <span class="material-symbols-outlined text-primary-fixed">settings_input_component</span>
+          </div>
+          <div>
+            <h4 class="font-headline font-bold text-on-surface">Git &amp; GitHub</h4>
+            <p class="text-xs text-on-surface-variant leading-relaxed mt-1">Version control, branching strategies, and collaborative development workflows.</p>
+          </div>
         </div>
-    </section>
+        <div class="flex items-start gap-4">
+          <div class="p-3 bg-surface-container-highest rounded-lg">
+            <span class="material-symbols-outlined text-primary-fixed">visibility</span>
+          </div>
+          <div>
+            <h4 class="font-headline font-bold text-on-surface">OpenCV &amp; PIL</h4>
+            <p class="text-xs text-on-surface-variant leading-relaxed mt-1">Image processing, augmentation pipelines, and computer vision preprocessing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Application Layer -->
+    <div class="md:col-span-7 bg-surface-container-low p-8 rounded-lg border-l-2 border-transparent hover:border-primary transition-all duration-500">
+      <div class="flex justify-between items-start mb-10">
+        <h3 class="font-headline text-3xl font-bold text-primary-fixed tracking-tight">Application Layer</h3>
+        <div class="flex gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-12">
+        <div>
+          <h4 class="text-[10px] font-label font-bold text-outline uppercase tracking-[0.25em] mb-6">Backend_Engine</h4>
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-primary"></span>
+              <span class="font-headline font-bold">Node.js / Express</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-primary"></span>
+              <span class="font-headline font-bold">RESTful APIs</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-primary"></span>
+              <span class="font-headline font-bold">Streamlit</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-[10px] font-label font-bold text-outline uppercase tracking-[0.25em] mb-6">Frontend_HUD</h4>
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-secondary"></span>
+              <span class="font-headline font-bold">React.js</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-secondary"></span>
+              <span class="font-headline font-bold">HTML / CSS</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-secondary"></span>
+              <span class="font-headline font-bold">JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Core CS -->
+  <div class="mt-6 bg-surface-container-lowest p-10 rounded-xl border border-outline-variant/5">
+    <div class="flex flex-col md:flex-row gap-12 items-center">
+      <div class="w-full md:w-1/3">
+        <h3 class="font-headline text-xl font-bold text-on-surface mb-2">Core CS Fundamentals</h3>
+        <p class="text-sm text-on-surface-variant">The theoretical foundation underpinning every system I build.</p>
+      </div>
+      <div class="w-full md:w-2/3 flex flex-wrap gap-x-12 gap-y-6">
+        <div class="flex flex-col">
+          <span class="text-[10px] font-label text-outline uppercase mb-1">Algorithms</span>
+          <code class="text-sm text-secondary font-mono">DSA</code>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-[10px] font-label text-outline uppercase mb-1">Design</span>
+          <code class="text-sm text-secondary font-mono">OOP</code>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-[10px] font-label text-outline uppercase mb-1">Storage</span>
+          <code class="text-sm text-secondary font-mono">DATABASE_SYSTEMS</code>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-[10px] font-label text-outline uppercase mb-1">Files</span>
+          <code class="text-sm text-secondary font-mono">FILE_HANDLING</code>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EDUCATION ===================== -->
+<section id="education" class="py-24 px-8 max-w-7xl mx-auto">
+  <header class="mb-24">
+    <div class="flex flex-col gap-4">
+      <span class="font-label text-primary-fixed-dim tracking-[0.3em] uppercase text-xs font-semibold">Career_Trajectory</span>
+      <h2 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter text-primary">Technical Narrative</h2>
+      <p class="max-w-2xl text-on-surface-variant text-lg leading-relaxed mt-4">
+        A synthesis of academic foundations and hands-on industry experience in AI, data science, and full-stack development.
+      </p>
+    </div>
+  </header>
+
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+    <!-- Timeline Visual Column -->
+    <div class="hidden lg:flex lg:col-span-1 flex-col items-center py-4">
+      <div class="w-1 h-full bg-gradient-to-b from-primary via-surface-container-highest to-outline-variant/20 rounded-full relative">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary ring-4 ring-primary/10" style="box-shadow: 0 0 40px -10px rgba(0,240,255,0.15)"></div>
+        <div class="absolute top-[33%] left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-surface-container-highest ring-4 ring-surface-container-highest/20"></div>
+        <div class="absolute top-[66%] left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-surface-container-highest ring-4 ring-surface-container-highest/20"></div>
+        <div class="absolute top-[90%] left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-outline-variant ring-4 ring-outline-variant/10"></div>
+      </div>
+    </div>
+
+    <!-- Content Column -->
+    <div class="lg:col-span-11 space-y-16">
+
+      <!-- ---- EXPERIENCE GROUP ---- -->
+      <div>
+        <div class="flex items-center gap-3 mb-10">
+          <span class="material-symbols-outlined text-tertiary text-xl">work</span>
+          <span class="font-label text-xs font-bold uppercase tracking-[0.3em] text-tertiary">Experience</span>
+          <div class="h-[1px] flex-grow bg-tertiary/20"></div>
+        </div>
+
+        <div class="space-y-12 pl-4 border-l-2 border-tertiary/30">
+          <!-- Elevvo Pathways -->
+          <section class="group relative pl-6">
+            <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-tertiary ring-4 ring-tertiary/10"></div>
+            <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-3">
+              <div class="flex flex-col gap-1">
+                <h3 class="font-headline text-2xl font-bold text-tertiary group-hover:text-[#6ffbbe] transition-colors">Data Science Intern (Remote)</h3>
+                <span class="font-label text-on-surface-variant text-sm font-medium uppercase tracking-widest">Elevvo Pathways</span>
+              </div>
+              <span class="font-label text-outline text-sm mt-2 md:mt-0 shrink-0">Feb 2026 — Mar 2026</span>
+            </div>
+            <p class="text-on-surface-variant text-sm leading-relaxed mb-4">
+              Leveraged TensorFlow and Keras to develop high-accuracy CNNs for image classification. Applied Linear Regression and statistical methods to analyze data trends, and implemented data science pipelines with 30×30 normalization for image consistency.
+            </p>
+            <div class="flex gap-3 flex-wrap">
+              <span class="px-3 py-1 bg-surface-container text-[10px] font-label font-bold text-tertiary border border-tertiary/20 rounded-full uppercase">TensorFlow</span>
+              <span class="px-3 py-1 bg-surface-container text-[10px] font-label font-bold text-tertiary border border-tertiary/20 rounded-full uppercase">Keras</span>
+              <span class="px-3 py-1 bg-surface-container text-[10px] font-label font-bold text-tertiary border border-tertiary/20 rounded-full uppercase">CNN</span>
+            </div>
+          </section>
+
+          <!-- Developers Hub -->
+          <section class="group relative pl-6">
+            <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-tertiary/50 ring-4 ring-tertiary/10"></div>
+            <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-3">
+              <div class="flex flex-col gap-1">
+                <h3 class="font-headline text-2xl font-bold text-tertiary group-hover:text-[#6ffbbe] transition-colors">Software Engineering Intern (Remote)</h3>
+                <span class="font-label text-on-surface-variant text-sm font-medium uppercase tracking-widest">Developers Hub Corporation</span>
+              </div>
+              <span class="font-label text-outline text-sm mt-2 md:mt-0 shrink-0">Apr 2025 — May 2025</span>
+            </div>
+            <p class="text-on-surface-variant text-sm leading-relaxed mb-4">
+              Developed a Task Management System using the MERN stack with full CRUD operations. Engineered a real-time status tracking feature and ensured robust backend data persistence.
+            </p>
+            <div class="flex gap-3 flex-wrap">
+              <span class="px-3 py-1 bg-surface-container text-[10px] font-label font-bold text-tertiary border border-tertiary/20 rounded-full uppercase">MongoDB</span>
+              <span class="px-3 py-1 bg-surface-container text-[10px] font-label font-bold text-tertiary border border-tertiary/20 rounded-full uppercase">React.js</span>
+              <span class="px-3 py-1 bg-surface-container text-[10px] font-label font-bold text-tertiary border border-tertiary/20 rounded-full uppercase">Node.js</span>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- ---- EDUCATION GROUP ---- -->
+      <div>
+        <div class="flex items-center gap-3 mb-10">
+          <span class="material-symbols-outlined text-primary text-xl">school</span>
+          <span class="font-label text-xs font-bold uppercase tracking-[0.3em] text-primary">Education</span>
+          <div class="h-[1px] flex-grow bg-primary/20"></div>
+        </div>
+
+        <div class="space-y-12 pl-4 border-l-2 border-primary/30">
+          <!-- FAST NUCES -->
+          <section class="group relative pl-6">
+            <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-primary ring-4 ring-primary/10"></div>
+            <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-3">
+              <div class="flex flex-col gap-1">
+                <h3 class="font-headline text-2xl font-bold text-primary group-hover:text-primary-fixed transition-colors">Bachelor of Computer Science</h3>
+                <span class="font-label text-secondary text-sm font-medium uppercase tracking-widest">National University of Computer and Emerging Sciences (FAST)</span>
+              </div>
+              <span class="font-label text-outline text-sm mt-2 md:mt-0 shrink-0">Aug 2024 — 2028</span>
+            </div>
+            <p class="text-on-surface-variant text-sm leading-relaxed mb-3">
+              Pursuing a Bachelor's in Computer Science with a focus on Data Science and AI. Relevant coursework: DSA, OOP, Database Systems.
+            </p>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-[10px] font-label font-bold text-primary uppercase tracking-widest">
+              <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span> In Progress
+            </span>
+          </section>
+
+          <!-- Beaconhouse -->
+          <section class="group relative pl-6">
+            <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-primary/50 ring-4 ring-primary/10"></div>
+            <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-3">
+              <div class="flex flex-col gap-1">
+                <h3 class="font-headline text-2xl font-bold text-primary group-hover:text-primary-fixed transition-colors">A Levels — Computer Science</h3>
+                <span class="font-label text-secondary text-sm font-medium uppercase tracking-widest">Beaconhouse</span>
+              </div>
+              <span class="font-label text-outline text-sm mt-2 md:mt-0 shrink-0">Aug 2021 — Aug 2023</span>
+            </div>
+            <p class="text-on-surface-variant text-sm leading-relaxed">
+              Cambridge International A Levels with specialization in Computer Science.
+            </p>
+          </section>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 </main>
 
-<footer>
-    <div class="footer-content">
-        <a href="#home" class="logo">MM<span>.</span></a>
-        <p>&copy; 2026 Muqeet Mahmood. All rights reserved.</p>
-        <div class="social-links">
-            <a href="https://github.com/Muqeet04" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/muqeet-mahmood-30a62b334/" target="_blank" aria-label="LinkedIn"><i
-                    class="fab fa-linkedin-in"></i></a>
-        </div>
+<!-- ===================== FOOTER ===================== -->
+<footer class="bg-[#0b1326] w-full py-12 border-t border-[#3b494b]/15">
+  <div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-8 gap-8">
+    <div class="text-lg font-bold text-[#dbfcff] font-headline tracking-tight uppercase">MM<span class="text-[#00F0FF]">.</span></div>
+    <p class="font-label text-xs tracking-widest uppercase text-[#31394d]">&copy; 2026 Muqeet Mahmood. All rights reserved.</p>
+    <div class="flex gap-8">
+      <a class="font-label text-xs tracking-widest uppercase text-[#31394d] hover:text-[#dbfcff] hover:-translate-y-1 transition-all duration-300" href="https://github.com/Muqeet04" target="_blank">GitHub</a>
+      <a class="font-label text-xs tracking-widest uppercase text-[#31394d] hover:text-[#dbfcff] hover:-translate-y-1 transition-all duration-300" href="https://www.linkedin.com/in/muqeet-mahmood-30a62b334/" target="_blank">LinkedIn</a>
+      <a class="font-label text-xs tracking-widest uppercase text-[#31394d] hover:text-[#dbfcff] hover:-translate-y-1 transition-all duration-300" href="mailto:muqeetmahmood80@gmail.com">Email</a>
     </div>
+  </div>
 </footer>
 
-<script src="script.js"></script>
-</body>
+<script>
+  // Mobile menu toggle
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn.addEventListener('click', () => menu.classList.toggle('open'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
 
+  // Active nav link highlighting
+  const sections = document.querySelectorAll('section[id], main > section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  const setActive = (id) => {
+    navLinks.forEach(link => {
+      const isActive = link.dataset.section === id;
+      link.style.color = isActive ? '#00F0FF' : '';
+      link.style.borderBottom = isActive ? '2px solid #00F0FF' : '';
+      link.style.paddingBottom = isActive ? '4px' : '';
+    });
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) setActive(entry.target.id);
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('section[id]').forEach(s => observer.observe(s));
+</script>
+</body>
 </html>

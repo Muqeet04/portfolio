@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-dim": "#0b1326",
+              "tertiary": "#d8ffe7",
+              "primary": "#dbfcff",
+              "on-background": "#dae2fd",
+              "error-container": "#93000a",
+              "secondary": "#d0bcff",
+              "on-primary": "#00363a",
+              "surface-tint": "#00dbe9",
+              "surface": "#0b1326",
+              "on-surface-variant": "#b9cacb",
+              "surface-bright": "#31394d",
+              "on-secondary-fixed-variant": "#5516be",
+              "surface-container-low": "#131b2e",
+              "secondary-container": "#571bc1",
+              "tertiary-container": "#65f2b5",
+              "on-secondary-fixed": "#23005c",
+              "on-tertiary-fixed-variant": "#005236",
+              "secondary-fixed-dim": "#d0bcff",
+              "on-tertiary-fixed": "#002113",
+              "tertiary-fixed": "#6ffbbe",
+              "primary-fixed": "#7df4ff",
+              "inverse-surface": "#dae2fd",
+              "secondary-fixed": "#e9ddff",
+              "tertiary-fixed-dim": "#4edea3",
+              "background": "#0b1326",
+              "primary-fixed-dim": "#00dbe9",
+              "on-primary-fixed-variant": "#004f54",
+              "error": "#ffb4ab",
+              "on-tertiary": "#003824",
+              "primary-container": "#00f0ff",
+              "surface-container-highest": "#2d3449",
+              "surface-variant": "#2d3449",
+              "surface-container": "#171f33",
+              "on-tertiary-container": "#006d4a",
+              "on-primary-fixed": "#002022",
+              "outline-variant": "#3b494b",
+              "outline": "#849495",
+              "on-secondary-container": "#c4abff",
+              "on-error": "#690005",
+              "on-secondary": "#3c0091",
+              "surface-container-high": "#222a3d",
+              "on-surface": "#dae2fd",
+              "inverse-on-surface": "#283044",
+              "on-error-container": "#ffdad6",
+              "on-primary-container": "#006970",
+              "inverse-primary": "#006970",
+              "surface-container-lowest": "#060e20"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .neural-gradient {
+        background: linear-gradient(135deg, #dbfcff 0%, #00dbe9 100%);
+      }
+      .glow-pulse {
+        box-shadow: 0 0 48px rgba(219, 252, 255, 0.05);
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0b1326]/80 backdrop-blur-xl shadow-[0_0_20px_rgba(0,240,255,0.05)]">
+<div class="bg-gradient-to-b from-[#131b2e] to-transparent">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+<div class="text-2xl font-black tracking-tighter text-[#dbfcff] font-headline uppercase">
+                    NEURAL_ARCHITECT
+                </div>
+<div class="hidden md:flex gap-10">
+<a class="text-[#00F0FF] border-b-2 border-[#00F0FF] pb-1 font-headline tracking-tight text-sm uppercase font-bold active:scale-95 transition-transform" href="#">Intro</a>
+<a class="text-[#31394d] hover:text-[#dbfcff] transition-colors font-headline tracking-tight text-sm uppercase font-bold active:scale-95 transition-transform" href="#">Projects</a>
+<a class="text-[#31394d] hover:text-[#dbfcff] transition-colors font-headline tracking-tight text-sm uppercase font-bold active:scale-95 transition-transform" href="#">Skills</a>
+<a class="text-[#31394d] hover:text-[#dbfcff] transition-colors font-headline tracking-tight text-sm uppercase font-bold active:scale-95 transition-transform" href="#">Education</a>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-fixed-dim text-on-primary px-6 py-2 rounded-md font-headline font-bold text-sm uppercase tracking-wider active:scale-95 transition-all shadow-[0_0_15px_rgba(0,240,255,0.2)]">
+                    Contact
+                </button>
+</div>
+</div>
+</nav>
+<main class="relative min-h-screen pt-20 overflow-hidden">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-8 py-20 lg:py-32 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Content Left -->
+<div class="lg:col-span-7 flex flex-col items-start gap-8">
+<div class="flex items-center gap-3 py-1 px-3 bg-surface-container-high rounded-full border border-outline-variant/10">
+<span class="w-2 h-2 rounded-full bg-tertiary shadow-[0_0_8px_#d8ffe7]"></span>
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant font-semibold">System Active: Neural Engine v4.0</span>
+</div>
+<h1 class="font-headline text-6xl md:text-8xl font-black tracking-tighter text-on-surface leading-[0.9] lg:max-w-2xl">
+                    ARCHITECTING <span class="text-primary italic">INTELLIGENCE</span>.
+                </h1>
+<p class="font-body text-on-surface-variant text-lg leading-relaxed max-w-xl">
+                    Senior software engineer specializing in high-dimensional AI/ML architectures. I transform complex neural datasets into precision-engineered production systems.
+                </p>
+<div class="flex flex-wrap gap-6 mt-4">
+<button class="neural-gradient text-on-primary px-8 py-4 rounded-md font-headline font-bold uppercase tracking-widest text-sm hover:scale-[1.02] active:scale-95 transition-all glow-pulse">
+                        View Projects
+                    </button>
+<button class="bg-transparent border border-outline-variant/20 text-primary px-8 py-4 rounded-md font-headline font-bold uppercase tracking-widest text-sm hover:bg-surface-container transition-all">
+                        Get in Touch
+                    </button>
+</div>
+<div class="mt-12 flex gap-12 border-t border-outline-variant/10 pt-8 w-full max-w-md">
+<div class="flex flex-col">
+<span class="font-headline font-black text-2xl text-primary">08+</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Years Experience</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline font-black text-2xl text-primary">24+</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Deployed Models</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline font-black text-2xl text-primary">0.02ms</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Avg Latency</span>
+</div>
+</div>
+</div>
+<!-- Visual Right - Asymmetric Technical HUD -->
+<div class="lg:col-span-5 relative">
+<div class="relative w-full aspect-square rounded-xl bg-surface-container-low overflow-hidden border border-outline-variant/10">
+<img alt="Abstract neural network visualization" class="w-full h-full object-cover opacity-60 mix-blend-screen" data-alt="Abstract 3D visualization of complex neural network nodes connected by glowing neon cyan light trails in a dark digital space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfMXYup1UU1liwS1bm3WRdYdqvL1chfns0roqUuZ2S-X4OkaKRvNgDeD3ORGtW0vqsi_Ut5pw64iDNQ39xvgLoUJe1U8o3QKNIXDwNGUFl2o8MDZXx187z8SurPyTq_HVbBcyT3OA23ZRcGFGgCypAzF-MxCxMwuqvSCTU_7Kz-I2AnJfFWtoM-g2sNYVGgyySjvXwqv0pdRzhxgx-VU-rUdSE0VsMOLiURZLZkou8UeVJVPzLiBejpJbAPmgkb8aGp5McJYHg7afG"/>
+<!-- HUD Overlays -->
+<div class="absolute inset-0 bg-gradient-to-tr from-surface-dim/80 via-transparent to-transparent"></div>
+<div class="absolute top-6 left-6 p-4 bg-surface-bright/80 backdrop-blur-md rounded-lg border border-outline-variant/20 flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">terminal</span>
+<span class="font-label text-[10px] uppercase text-primary font-bold">Inference Terminal</span>
+</div>
+<div class="font-mono text-[9px] text-tertiary/70 leading-tight">
+                            &gt; Loading Weights... [OK]<br/>
+                            &gt; Optimizing Tensors... [OK]<br/>
+                            &gt; Accuracy: 99.98%
+                        </div>
+</div>
+<div class="absolute bottom-6 right-6 p-4 bg-surface-container-highest/90 backdrop-blur-md rounded-lg border-l-2 border-primary">
+<div class="flex flex-col">
+<span class="font-label text-[10px] uppercase text-outline mb-1">Compute Load</span>
+<div class="w-32 h-1 bg-surface-container rounded-full overflow-hidden">
+<div class="w-3/4 h-full bg-tertiary shadow-[0_0_8px_rgba(111,251,190,0.5)]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Decorative elements -->
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-primary/5 blur-[120px] rounded-full"></div>
+<div class="absolute -bottom-12 -left-12 w-48 h-48 bg-secondary/5 blur-[100px] rounded-full"></div>
+</div>
+</section>
+<!-- Technical Skill Pips Marquee-style row -->
+<section class="max-w-7xl mx-auto px-8 pb-20 overflow-hidden">
+<div class="flex gap-4 items-center mb-6">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Core Technologies</span>
+<div class="h-[1px] flex-grow bg-outline-variant/10"></div>
+</div>
+<div class="flex flex-wrap gap-4 opacity-70 hover:opacity-100 transition-opacity">
+<div class="bg-surface-container px-4 py-2 rounded-md border border-outline-variant/10 font-mono text-xs text-on-surface-variant">PyTorch.v2</div>
+<div class="bg-surface-container px-4 py-2 rounded-md border border-outline-variant/10 font-mono text-xs text-on-surface-variant">CUDA_C++</div>
+<div class="bg-surface-container px-4 py-2 rounded-md border border-outline-variant/10 font-mono text-xs text-on-surface-variant">Transformers</div>
+<div class="bg-surface-container px-4 py-2 rounded-md border border-outline-variant/10 font-mono text-xs text-on-surface-variant">Kubernetes</div>
+<div class="bg-surface-container px-4 py-2 rounded-md border border-outline-variant/10 font-mono text-xs text-on-surface-variant">TensorRT</div>
+<div class="bg-surface-container px-4 py-2 rounded-md border border-outline-variant/10 font-mono text-xs text-on-surface-variant">Next.js</div>
+<div class="bg-surface-container px-4 py-2 rounded-md border border-outline-variant/10 font-mono text-xs text-on-surface-variant">Rust</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 border-t border-[#3b494b]/15 bg-[#0b1326]">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-8 gap-8">
+<div class="text-lg font-bold text-[#dbfcff] font-headline uppercase tracking-tighter">
+                NEURAL_ARCHITECT
+            </div>
+<div class="text-[#31394d] font-['Space_Grotesk'] text-xs tracking-widest uppercase">
+                © 2024 NEURAL ARCHITECT. ENGINEERED FOR PRECISION.
+            </div>
+<div class="flex gap-8">
+<a class="text-[#31394d] hover:text-[#dbfcff] transition-all hover:-translate-y-1 font-headline text-xs tracking-widest uppercase" href="#">GitHub</a>
+<a class="text-[#31394d] hover:text-[#dbfcff] transition-all hover:-translate-y-1 font-headline text-xs tracking-widest uppercase" href="#">LinkedIn</a>
+<a class="text-[#31394d] hover:text-[#dbfcff] transition-all hover:-translate-y-1 font-headline text-xs tracking-widest uppercase" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+</body></html>

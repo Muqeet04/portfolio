@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-dim": "#0b1326",
+              "tertiary": "#d8ffe7",
+              "primary": "#dbfcff",
+              "on-background": "#dae2fd",
+              "error-container": "#93000a",
+              "secondary": "#d0bcff",
+              "on-primary": "#00363a",
+              "surface-tint": "#00dbe9",
+              "surface": "#0b1326",
+              "on-surface-variant": "#b9cacb",
+              "surface-bright": "#31394d",
+              "on-secondary-fixed-variant": "#5516be",
+              "surface-container-low": "#131b2e",
+              "secondary-container": "#571bc1",
+              "tertiary-container": "#65f2b5",
+              "on-secondary-fixed": "#23005c",
+              "on-tertiary-fixed-variant": "#005236",
+              "secondary-fixed-dim": "#d0bcff",
+              "on-tertiary-fixed": "#002113",
+              "tertiary-fixed": "#6ffbbe",
+              "primary-fixed": "#7df4ff",
+              "inverse-surface": "#dae2fd",
+              "secondary-fixed": "#e9ddff",
+              "tertiary-fixed-dim": "#4edea3",
+              "background": "#0b1326",
+              "primary-fixed-dim": "#00dbe9",
+              "on-primary-fixed-variant": "#004f54",
+              "error": "#ffb4ab",
+              "on-tertiary": "#003824",
+              "primary-container": "#00f0ff",
+              "surface-container-highest": "#2d3449",
+              "surface-variant": "#2d3449",
+              "surface-container": "#171f33",
+              "on-tertiary-container": "#006d4a",
+              "on-primary-fixed": "#002022",
+              "outline-variant": "#3b494b",
+              "outline": "#849495",
+              "on-secondary-container": "#c4abff",
+              "on-error": "#690005",
+              "on-secondary": "#3c0091",
+              "surface-container-high": "#222a3d",
+              "on-surface": "#dae2fd",
+              "inverse-on-surface": "#283044",
+              "on-error-container": "#ffdad6",
+              "on-primary-container": "#006970",
+              "inverse-primary": "#006970",
+              "surface-container-lowest": "#060e20"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .neural-glow {
+        box-shadow: 0 0 40px -10px rgba(0, 240, 255, 0.15);
+      }
+      .glass-card {
+        backdrop-filter: blur(12px);
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0b1326]/80 backdrop-blur-xl bg-gradient-to-b from-[#131b2e] to-transparent shadow-[0_0_20px_rgba(0,240,255,0.05)]">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+<div class="text-2xl font-black tracking-tighter text-[#dbfcff] font-headline">NEURAL_ARCHITECT</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-headline tracking-tight text-sm uppercase font-bold text-[#31394d] hover:text-[#dbfcff] transition-colors duration-300" href="#">Intro</a>
+<a class="font-headline tracking-tight text-sm uppercase font-bold text-[#31394d] hover:text-[#dbfcff] transition-colors duration-300" href="#">Projects</a>
+<a class="font-headline tracking-tight text-sm uppercase font-bold text-[#31394d] hover:text-[#dbfcff] transition-colors duration-300" href="#">Skills</a>
+<a class="font-headline tracking-tight text-sm uppercase font-bold text-[#00F0FF] border-b-2 border-[#00F0FF] pb-1" href="#">Education</a>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-fixed-dim text-on-primary px-6 py-2 rounded-md font-headline font-bold text-sm uppercase tracking-wider active:scale-95 transition-transform">
+                Contact
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-8 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<header class="mb-24">
+<div class="flex flex-col gap-4">
+<span class="font-label text-primary-fixed-dim tracking-[0.3em] uppercase text-xs font-semibold">Career_Trajectory</span>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter text-primary">Technical Narrative</h1>
+<p class="max-w-2xl text-on-surface-variant text-lg leading-relaxed mt-4">
+                    Architecting high-performance machine learning systems and scalable infrastructures. A synthesis of advanced theory and enterprise execution.
+                </p>
+</div>
+</header>
+<!-- Main Timeline Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Timeline Visual Column -->
+<div class="hidden lg:flex lg:col-span-1 flex-col items-center py-4">
+<div class="w-1 h-full bg-gradient-to-b from-primary via-surface-container-highest to-outline-variant/20 rounded-full relative">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary neural-glow ring-4 ring-primary/10"></div>
+<div class="absolute top-[42%] left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-surface-container-highest ring-4 ring-surface-container-highest/20"></div>
+<div class="absolute top-[85%] left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-outline-variant ring-4 ring-outline-variant/10"></div>
+</div>
+</div>
+<!-- Content Column -->
+<div class="lg:col-span-11 space-y-24">
+<!-- 01: Senior Software Engineer -->
+<section class="group relative">
+<div class="flex flex-col md:flex-row md:items-baseline justify-between mb-6">
+<div class="flex flex-col gap-1">
+<h2 class="font-headline text-3xl font-bold text-primary group-hover:text-primary-fixed transition-colors">Senior Software Engineer</h2>
+<span class="font-label text-secondary text-sm font-medium uppercase tracking-widest">Tech Giant Corp // Distributed Systems Team</span>
+</div>
+<span class="font-label text-outline text-sm mt-2 md:mt-0">2021 — PRESENT</span>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="md:col-span-2 space-y-4">
+<p class="text-on-surface-variant leading-relaxed">
+                                Lead developer for the core latency-optimization engine servicing 40M+ concurrent users. Orchestrating the migration of legacy monolith components into high-concurrency Rust-based microservices.
+                            </p>
+<ul class="space-y-3">
+<li class="flex gap-3 text-sm items-start">
+<span class="material-symbols-outlined text-primary text-lg">terminal</span>
+<span class="text-on-surface">Engineered a custom K8s scheduler reducing idle compute costs by 22% ($4.2M ARR).</span>
+</li>
+<li class="flex gap-3 text-sm items-start">
+<span class="material-symbols-outlined text-primary text-lg">database</span>
+<span class="text-on-surface">Optimized data ingestion pipelines using Apache Flink, achieving sub-100ms processing times.</span>
+</li>
+</ul>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg border-l-2 border-primary/20 hover:bg-surface-container-high transition-all">
+<h4 class="font-label text-xs font-bold text-outline-variant mb-4 tracking-widest uppercase">Stack_Environment</h4>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-highest text-primary-fixed text-[10px] font-bold rounded-full uppercase">Rust</span>
+<span class="px-3 py-1 bg-surface-container-highest text-primary-fixed text-[10px] font-bold rounded-full uppercase">Go</span>
+<span class="px-3 py-1 bg-surface-container-highest text-primary-fixed text-[10px] font-bold rounded-full uppercase">Kubernetes</span>
+<span class="px-3 py-1 bg-surface-container-highest text-primary-fixed text-[10px] font-bold rounded-full uppercase">gRPC</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 02: MS Computer Science -->
+<section class="group relative">
+<div class="flex flex-col md:flex-row md:items-baseline justify-between mb-6">
+<div class="flex flex-col gap-1">
+<h2 class="font-headline text-3xl font-bold text-primary group-hover:text-primary-fixed transition-colors">MS in Computer Science</h2>
+<span class="font-label text-tertiary text-sm font-medium uppercase tracking-widest">Stanford University // Specialization in AI</span>
+</div>
+<span class="font-label text-outline text-sm mt-2 md:mt-0">2019 — 2021</span>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="md:col-span-2">
+<div class="relative rounded-xl overflow-hidden mb-6 h-48 group-hover:neural-glow transition-all duration-500">
+<img class="w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-80 transition-all duration-700" data-alt="Close-up of high-performance server farm with blue LED lights reflecting on glass surfaces in a futuristic research facility" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzKr1RMYCOGZ7LTaBUmo1vRi8VEER5cWVlN9OQP5-ZpIINSSF1zfSUiXS-b1l5o_vF5nb5qGoBTZhnWLLqfKgxY7foY0Jf7e9bn3gTw_8IRkP5Rp240t5fnfNLc4F68nRhB357no3LdBipt6ag59rYyCNbcB3b2BIJxFh-k5_6kC3S2C5f6JPzivrctSzFhYSPZjB-2Ho_LfJjttXf33a2DSTVT9WzOdtgpk6p4gFrzFdS5Onq1nD2JsiuuaSFZ3bkM_SBxwVCz0Hm"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim to-transparent"></div>
+<div class="absolute bottom-4 left-6">
+<p class="font-label text-xs text-primary font-bold tracking-widest uppercase">Research focus: Transformers &amp; RLHF</p>
+</div>
+</div>
+<p class="text-on-surface-variant leading-relaxed">
+                                Advanced coursework in Deep Learning, Computer Vision, and Probabilistic Graphical Models. Thesis: "Optimizing Sparse Attention Mechanisms for Long-Context Sequence Modeling."
+                            </p>
+</div>
+<div class="space-y-4">
+<div class="bg-surface-container p-5 rounded-lg border-l-2 border-tertiary/20">
+<h4 class="font-label text-xs font-bold text-outline-variant mb-2 uppercase">Academic_Highlights</h4>
+<p class="text-xs text-on-surface-variant font-medium">GPA: 3.98/4.00</p>
+<p class="text-xs text-on-surface-variant mt-1">Research Assistant at the Neural Computation Lab</p>
+</div>
+<div class="bg-surface-container p-5 rounded-lg border-l-2 border-tertiary/20">
+<h4 class="font-label text-xs font-bold text-outline-variant mb-2 uppercase">Relevant_Theories</h4>
+<p class="text-xs text-on-surface-variant font-medium">Neural ODEs</p>
+<p class="text-xs text-on-surface-variant mt-1">Stochastic Optimization</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 03: Machine Learning Intern -->
+<section class="group relative">
+<div class="flex flex-col md:flex-row md:items-baseline justify-between mb-6">
+<div class="flex flex-col gap-1">
+<h2 class="font-headline text-3xl font-bold text-primary group-hover:text-primary-fixed transition-colors">Machine Learning Intern</h2>
+<span class="font-label text-outline text-sm font-medium uppercase tracking-widest">Neural Dynamics Research</span>
+</div>
+<span class="font-label text-outline text-sm mt-2 md:mt-0">SUMMER 2020</span>
+</div>
+<div class="flex flex-col md:flex-row gap-12 items-center">
+<div class="flex-1 space-y-4">
+<p class="text-on-surface-variant leading-relaxed">
+                                Developed data augmentation pipelines for medical imaging datasets, improving model robustness against noise by 14%. Implemented automated hyperparameter tuning using Bayesian Optimization.
+                            </p>
+<div class="flex gap-4">
+<div class="flex items-center gap-2">
+<div class="w-1.5 h-1.5 rounded-full bg-primary-fixed shadow-[0_0_8px_#00f0ff]"></div>
+<span class="font-label text-[10px] uppercase font-bold text-outline">Pytorch</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-1.5 h-1.5 rounded-full bg-primary-fixed shadow-[0_0_8px_#00f0ff]"></div>
+<span class="font-label text-[10px] uppercase font-bold text-outline">TensorFlow</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-1.5 h-1.5 rounded-full bg-primary-fixed shadow-[0_0_8px_#00f0ff]"></div>
+<span class="font-label text-[10px] uppercase font-bold text-outline">OpenCV</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-64 h-32 bg-surface-container-lowest flex items-center justify-center border border-outline-variant/10 rounded-lg">
+<span class="material-symbols-outlined text-outline-variant text-4xl">neurology</span>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Bento Grid Skills Preview -->
+<section class="mt-32">
+<h3 class="font-headline text-4xl font-extrabold text-primary mb-12 tracking-tight">System Competencies</h3>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[120px]">
+<div class="md:col-span-2 md:row-span-2 bg-surface-container rounded-xl p-8 flex flex-col justify-end relative overflow-hidden group">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-110 transition-transform duration-700" data-alt="Macro photo of complex code structure with syntax highlighting on a high resolution screen, cyan and violet colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWaeeek8fSa4qZY4Ch1AI8dIer6CgleN3akoal6YzNT-ganBiVxy8C1OuUAbiYvP1dYit_zOrqBcLU3zLyc9OdrBZ-N-43pi2XEnNBxuNMQ2bvGHyUOslU5VQp-IJJYaHueFCKRwgifxatnhvsTKb2OjZsuzu30KU8sydoeLy1vcp9myAMIaUQGOovIRmmFE2bA-F7l9-VaC-ubGGmtBPkp9KRYocevHVY9_5u3L6uy25QC6gAAcWVmc1CNDRtF7fEnFzsnd9UX782"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/60 to-transparent"></div>
+<div class="relative">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl" style="font-variation-settings: 'FILL' 1;">psychology</span>
+<h4 class="font-headline text-2xl font-bold text-white mb-2">Advanced AI Architecture</h4>
+<p class="text-sm text-on-surface-variant">LLM fine-tuning, RAG pipelines, and diffusion model deployment.</p>
+</div>
+</div>
+<div class="md:col-span-1 bg-surface-container-low p-6 flex flex-col justify-between border-b-2 border-primary/40">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Infrastructure</span>
+<p class="text-white font-bold">Cloud-Native Architecture</p>
+</div>
+<div class="md:col-span-1 bg-surface-container-low p-6 flex flex-col justify-between border-b-2 border-secondary/40">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Language</span>
+<p class="text-white font-bold">Rust &amp; Systems Engineering</p>
+</div>
+<div class="md:col-span-2 md:row-span-1 bg-surface-container-high p-6 flex items-center gap-6 group">
+<div class="w-16 h-full bg-surface-container-highest rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-2xl">rocket_launch</span>
+</div>
+<div>
+<h4 class="text-white font-bold text-lg">Scalable Operations</h4>
+<p class="text-xs text-on-surface-variant">Automated MLOps and CI/CD for high-availability systems.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0b1326] w-full py-12 border-t border-[#3b494b]/15">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-8 gap-8">
+<div class="text-lg font-bold text-[#dbfcff] font-headline tracking-tight">NEURAL ARCHITECT</div>
+<p class="font-['Space_Grotesk'] text-xs tracking-widest uppercase text-[#31394d]">© 2024 NEURAL ARCHITECT. ENGINEERED FOR PRECISION.</p>
+<div class="flex gap-8">
+<a class="font-['Space_Grotesk'] text-xs tracking-widest uppercase text-[#31394d] hover:text-[#dbfcff] hover:-translate-y-1 transition-all duration-300" href="#">GitHub</a>
+<a class="font-['Space_Grotesk'] text-xs tracking-widest uppercase text-[#31394d] hover:text-[#dbfcff] hover:-translate-y-1 transition-all duration-300" href="#">LinkedIn</a>
+<a class="font-['Space_Grotesk'] text-xs tracking-widest uppercase text-[#31394d] hover:text-[#dbfcff] hover:-translate-y-1 transition-all duration-300" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Inter:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-dim": "#0b1326",
+                        "tertiary": "#d8ffe7",
+                        "primary": "#dbfcff",
+                        "on-background": "#dae2fd",
+                        "error-container": "#93000a",
+                        "secondary": "#d0bcff",
+                        "on-primary": "#00363a",
+                        "surface-tint": "#00dbe9",
+                        "surface": "#0b1326",
+                        "on-surface-variant": "#b9cacb",
+                        "surface-bright": "#31394d",
+                        "on-secondary-fixed-variant": "#5516be",
+                        "surface-container-low": "#131b2e",
+                        "secondary-container": "#571bc1",
+                        "tertiary-container": "#65f2b5",
+                        "on-secondary-fixed": "#23005c",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "secondary-fixed-dim": "#d0bcff",
+                        "on-tertiary-fixed": "#002113",
+                        "tertiary-fixed": "#6ffbbe",
+                        "primary-fixed": "#7df4ff",
+                        "inverse-surface": "#dae2fd",
+                        "secondary-fixed": "#e9ddff",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "background": "#0b1326",
+                        "primary-fixed-dim": "#00dbe9",
+                        "on-primary-fixed-variant": "#004f54",
+                        "error": "#ffb4ab",
+                        "on-tertiary": "#003824",
+                        "primary-container": "#00f0ff",
+                        "surface-container-highest": "#2d3449",
+                        "surface-variant": "#2d3449",
+                        "surface-container": "#171f33",
+                        "on-tertiary-container": "#006d4a",
+                        "on-primary-fixed": "#002022",
+                        "outline-variant": "#3b494b",
+                        "outline": "#849495",
+                        "on-secondary-container": "#c4abff",
+                        "on-error": "#690005",
+                        "on-secondary": "#3c0091",
+                        "surface-container-high": "#222a3d",
+                        "on-surface": "#dae2fd",
+                        "inverse-on-surface": "#283044",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-container": "#006970",
+                        "inverse-primary": "#006970",
+                        "surface-container-lowest": "#060e20"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .neural-glow {
+            box-shadow: 0 0 48px rgba(219, 252, 255, 0.05);
+        }
+        .accent-bar {
+            width: 2px;
+            height: 0;
+            transition: height 0.3s ease;
+        }
+        .project-card:hover .accent-bar {
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0b1326]/80 backdrop-blur-xl shadow-[0_0_20px_rgba(0,240,255,0.05)] bg-gradient-to-b from-[#131b2e] to-transparent">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+<div class="text-2xl font-black tracking-tighter text-[#dbfcff] font-headline">NEURAL_ARCHITECT</div>
+<div class="hidden md:flex items-center gap-10 font-['Space_Grotesk'] tracking-tight text-sm uppercase font-bold">
+<a class="text-[#31394d] hover:text-[#dbfcff] transition-colors duration-300" href="#">Intro</a>
+<a class="text-[#00F0FF] border-b-2 border-[#00F0FF] pb-1" href="#">Projects</a>
+<a class="text-[#31394d] hover:text-[#dbfcff] transition-colors duration-300" href="#">Skills</a>
+<a class="text-[#31394d] hover:text-[#dbfcff] transition-colors duration-300" href="#">Education</a>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-fixed-dim text-on-primary px-6 py-2.5 rounded-md font-headline font-bold text-sm tracking-widest uppercase active:scale-95 transition-transform">
+                Contact
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-8 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<header class="mb-20">
+<div class="flex items-center gap-4 mb-4">
+<span class="h-[1px] w-12 bg-primary/30"></span>
+<span class="font-label text-primary tracking-[0.3em] text-[10px] uppercase font-bold">Portfolio Index</span>
+</div>
+<h1 class="font-headline text-5xl md:text-7xl font-black tracking-tighter text-primary leading-tight max-w-4xl">
+                ENGINEERED<br/>SYSTEMS.
+            </h1>
+<p class="mt-8 text-on-surface-variant max-w-xl text-lg leading-relaxed">
+                A showcase of high-performance computation, architectural precision, and generative intelligence.
+            </p>
+</header>
+<!-- Projects Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Project 1: Deep Learning -->
+<div class="md:col-span-8 group relative project-card bg-surface-container-low overflow-hidden rounded-md transition-all duration-500 hover:bg-surface-container-high neural-glow">
+<div class="absolute left-0 top-0 accent-bar bg-primary"></div>
+<div class="flex flex-col md:flex-row h-full">
+<div class="flex-1 p-8 md:p-12 flex flex-col justify-between">
+<div>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-surface-container-highest px-3 py-1 text-[10px] font-label font-bold tracking-widest text-secondary uppercase rounded-full">PyTorch</span>
+<span class="bg-surface-container-highest px-3 py-1 text-[10px] font-label font-bold tracking-widest text-secondary uppercase rounded-full">GANs</span>
+<span class="bg-surface-container-highest px-3 py-1 text-[10px] font-label font-bold tracking-widest text-secondary uppercase rounded-full">CUDA</span>
+</div>
+<h3 class="font-headline text-3xl font-bold tracking-tight text-primary mb-4">Deep Learning Model for Image Synthesis</h3>
+<p class="text-on-surface-variant text-sm leading-loose max-w-md">
+                                Developing state-of-the-art generative adversarial networks to synthesize high-resolution architectural visualizations from wireframe inputs.
+                            </p>
+</div>
+<div class="mt-12 flex items-center gap-8">
+<a class="flex items-center gap-2 group/link text-primary font-label text-xs font-bold tracking-widest uppercase" href="#">
+                                Demo <span class="material-symbols-outlined text-lg group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<a class="flex items-center gap-2 group/link text-outline font-label text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors" href="#">
+                                Source Code <span class="material-symbols-outlined text-lg">code</span>
+</a>
+</div>
+</div>
+<div class="w-full md:w-2/5 min-h-[300px] relative overflow-hidden bg-surface-container">
+<img class="absolute inset-0 w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Abstract visualization of neural network layers with glowing nodes and complex data interconnections in deep blue and neon cyan tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXe_9ghhwWhO2iexpbkSapKbm-WgMx1lzbjLVUjkbNYT_wkL-ijczwdjJD-z4oasuna1FXQSqxwqWiCxpCR52e6qGoWiaB9HXyYS7P0LJyPTyZn04xJDORgCJLRtT_jM4vibd_4Csm-H9MHA00AfMoZlGNnCl49PsMRRalnzvCzDNkEOmnyeouudG-vLEpoekXVYGsjAV8FiA3sOt6UKnEa79-z1upQ05LrirCTdpyao-FraIFrfBRI9TFAoy6CME0yirJFipa_tzg"/>
+</div>
+</div>
+</div>
+<!-- Project 2: Distributed Microservices -->
+<div class="md:col-span-4 group relative project-card bg-surface-container-low overflow-hidden rounded-md transition-all duration-500 hover:bg-surface-container-high neural-glow">
+<div class="absolute left-0 top-0 accent-bar bg-primary"></div>
+<div class="p-8 h-full flex flex-col">
+<div class="mb-8">
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-surface-container-highest px-3 py-1 text-[10px] font-label font-bold tracking-widest text-secondary uppercase rounded-full">Kubernetes</span>
+<span class="bg-surface-container-highest px-3 py-1 text-[10px] font-label font-bold tracking-widest text-secondary uppercase rounded-full">Go</span>
+</div>
+<h3 class="font-headline text-2xl font-bold tracking-tight text-primary mb-4">Distributed Microservices Architecture</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                            Highly resilient orchestration of containerized services with automated scaling and self-healing protocols for enterprise fintech.
+                        </p>
+</div>
+<div class="mt-auto flex flex-col gap-4">
+<a class="flex items-center justify-between group/link text-primary font-label text-xs font-bold tracking-widest uppercase border border-outline-variant/20 p-4 rounded-md hover:bg-primary/5 transition-all" href="#">
+                            View Demo <span class="material-symbols-outlined text-lg">open_in_new</span>
+</a>
+<a class="flex items-center justify-between group/link text-outline font-label text-xs font-bold tracking-widest uppercase p-4 rounded-md hover:text-primary transition-colors" href="#">
+                            Source Code <span class="material-symbols-outlined text-lg">terminal</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Project 3: NLP Pipeline -->
+<div class="md:col-span-12 group relative project-card bg-surface-container-low overflow-hidden rounded-md transition-all duration-500 hover:bg-surface-container-high neural-glow">
+<div class="absolute left-0 top-0 accent-bar bg-primary"></div>
+<div class="flex flex-col md:flex-row items-center">
+<div class="w-full md:w-1/3 p-8 md:p-12 border-b md:border-b-0 md:border-r border-outline-variant/10">
+<div class="font-mono text-[10px] text-outline mb-4">LOG_STREAMS: ACTIVE</div>
+<h3 class="font-headline text-3xl font-bold tracking-tight text-primary mb-2">Natural Language Processing Pipeline</h3>
+<span class="text-tertiary font-label text-[10px] font-bold tracking-widest uppercase">Semantic Analysis v4.2</span>
+</div>
+<div class="flex-1 p-8 md:p-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<p class="text-on-surface-variant text-sm leading-loose">
+                                End-to-end transformer-based pipeline for real-time sentiment extraction and entity recognition across multi-lingual financial news feeds.
+                            </p>
+<div class="flex flex-col justify-end">
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-surface-container-highest px-3 py-1 text-[10px] font-label font-bold tracking-widest text-secondary uppercase rounded-full">Transformers</span>
+<span class="bg-surface-container-highest px-3 py-1 text-[10px] font-label font-bold tracking-widest text-secondary uppercase rounded-full">HuggingFace</span>
+<span class="bg-surface-container-highest px-3 py-1 text-[10px] font-label font-bold tracking-widest text-secondary uppercase rounded-full">Redis</span>
+</div>
+<div class="flex gap-6">
+<a class="text-primary font-label text-xs font-bold tracking-widest uppercase flex items-center gap-2" href="#">Live Status <span class="w-1.5 h-1.5 rounded-full bg-tertiary shadow-[0_0_8px_#6ffbbe]"></span></a>
+<a class="text-outline hover:text-primary font-label text-xs font-bold tracking-widest uppercase transition-colors" href="#">Documentation</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Call to Action -->
+<section class="mt-32 p-12 bg-surface-container-high rounded-md flex flex-col md:flex-row items-center justify-between gap-8 border border-outline-variant/10">
+<div class="text-center md:text-left">
+<h4 class="font-headline text-3xl font-bold text-primary mb-2">Need a custom architect?</h4>
+<p class="text-on-surface-variant font-body">Available for specialized ML and Backend consultations.</p>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-fixed-dim text-on-primary px-10 py-4 rounded-md font-headline font-black tracking-widest uppercase shadow-[0_0_24px_rgba(219,252,255,0.15)] active:scale-95 transition-transform">
+                Initiate Protocol
+            </button>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0b1326] w-full py-12 border-t border-[#3b494b]/15">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-8 gap-8">
+<div class="flex flex-col items-center md:items-start gap-2">
+<div class="text-lg font-bold text-[#dbfcff] font-headline">NEURAL ARCHITECT</div>
+<div class="font-['Space_Grotesk'] text-xs tracking-widest uppercase text-[#31394d]">© 2024 NEURAL ARCHITECT. ENGINEERED FOR PRECISION.</div>
+</div>
+<div class="flex gap-10 font-['Space_Grotesk'] text-xs tracking-widest uppercase">
+<a class="text-[#31394d] hover:text-[#dbfcff] transition-all hover:-translate-y-1" href="#">GitHub</a>
+<a class="text-[#31394d] hover:text-[#dbfcff] transition-all hover:-translate-y-1" href="#">LinkedIn</a>
+<a class="text-[#31394d] hover:text-[#dbfcff] transition-all hover:-translate-y-1" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+</body></html>
