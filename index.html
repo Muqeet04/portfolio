@@ -194,7 +194,28 @@
         }
       }
     }
-  }</script><style>html{scroll-behavior:smooth;} #mobile-nav.open{display:flex!important;}</style></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/75 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-gutter-mobile md:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="group flex items-center gap-space-sm" data-path="prologue" href="#prologue"><div class="w-2.5 h-2.5 rounded-full bg-primary-container shadow-[0_0_12px_rgba(0,245,160,0.8)]"></div><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface group-hover:text-primary transition-colors">MM<span class="text-primary-container">.DEV</span></span></a><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container-low"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary-container"></span></span><span class="font-telemetry-xs text-telemetry-xs uppercase text-on-surface-variant">STATUS: <span class="text-primary">READY FOR DEPLOYMENT</span></span></div></div><nav class="hidden lg:flex items-center gap-space-xs p-space-xs rounded-xl bg-surface-container-lowest/80 backdrop-blur-md" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm text-label-code rounded shadow-[0_0_15px_rgba(0,245,160,0.3)]"><a aria-current="page" class="px-space-md py-space-xs transition-all bg-primary-container text-on-primary-container font-headline-sm text-label-code rounded shadow-[0_0_15px_rgba(0,245,160,0.3)]" data-path="prologue" href="#prologue">Prologue</a><a class="font-label-code text-label-code px-space-md py-space-xs rounded text-on-surface-variant hover:text-on-surface transition-all" data-path="vision" href="#vision">Vision</a><a class="font-label-code text-label-code px-space-md py-space-xs rounded text-on-surface-variant hover:text-on-surface transition-all" data-path="systems" href="#systems">Systems</a><a class="font-label-code text-label-code px-space-md py-space-xs rounded text-on-surface-variant hover:text-on-surface transition-all" data-path="matrix" href="#matrix">Matrix</a><a class="font-label-code text-label-code px-space-md py-space-xs rounded text-on-surface-variant hover:text-on-surface transition-all" data-path="odyssey" href="#odyssey">Odyssey</a><a class="font-label-code text-label-code px-space-md py-space-xs rounded text-on-surface-variant hover:text-on-surface transition-all" data-path="transmission" href="#transmission">Transmission</a></nav><div class="flex items-center gap-space-md"><a class="relative inline-flex items-center justify-center px-space-lg py-space-xs rounded bg-primary-container font-headline-sm text-body-sm font-semibold text-on-primary-container shadow-[0_0_20px_rgba(0,245,160,0.4)] hover:bg-primary-fixed hover:text-on-primary-fixed transition-all" data-path="transmission" href="#transmission">Get in Touch</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+  }</script><style>
+html { scroll-behavior: smooth; }
+#mobile-nav.open { display: flex !important; }
+
+/* 3D Card Perspective and Glow */
+.tilt-card {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+}
+.tilt-card:hover {
+  transform: translateY(-6px) scale(1.01);
+}
+</style></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/75 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-gutter-mobile md:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="group flex items-center gap-space-sm" data-path="prologue" href="#prologue"><div class="w-2.5 h-2.5 rounded-full bg-primary-container shadow-[0_0_12px_rgba(0,245,160,0.8)]"></div><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface group-hover:text-primary transition-colors">MM<span class="text-primary-container">.DEV</span></span></a><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container-low"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary-container"></span></span><span class="font-telemetry-xs text-telemetry-xs uppercase text-on-surface-variant">STATUS: <span class="text-primary">READY FOR DEPLOYMENT</span></span></div></div><nav class="hidden lg:flex items-center gap-space-xs p-space-xs rounded-xl bg-surface-container-lowest/80 backdrop-blur-md" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm text-label-code rounded shadow-[0_0_15px_rgba(0,245,160,0.3)]">
+  <a aria-current="page" class="px-space-md py-space-xs transition-all bg-primary-container text-on-primary-container font-headline-sm text-label-code rounded shadow-[0_0_15px_rgba(0,245,160,0.3)]" data-path="prologue" href="#prologue">Prologue</a>
+  <a class="font-label-code text-label-code px-space-md py-space-xs rounded text-on-surface-variant hover:text-on-surface transition-all" data-path="vision" href="#vision">Vision</a>
+  <a class="font-label-code text-label-code px-space-md py-space-xs rounded text-on-surface-variant hover:text-on-surface transition-all" data-path="systems" href="#systems">Systems</a>
+  <a class="font-label-code text-label-code px-space-md py-space-xs rounded text-on-surface-variant hover:text-on-surface transition-all" data-path="matrix" href="#matrix">Matrix</a>
+  <a class="font-label-code text-label-code px-space-md py-space-xs rounded text-on-surface-variant hover:text-on-surface transition-all" data-path="experience" href="#experience">Experience</a>
+  <a class="font-label-code text-label-code px-space-md py-space-xs rounded text-on-surface-variant hover:text-on-surface transition-all" data-path="education" href="#education">Education</a>
+  <a class="font-label-code text-label-code px-space-md py-space-xs rounded text-on-surface-variant hover:text-on-surface transition-all" data-path="transmission" href="#transmission">Transmission</a>
+</nav><div class="flex items-center gap-space-md"><a class="relative inline-flex items-center justify-center px-space-lg py-space-xs rounded bg-primary-container font-headline-sm text-body-sm font-semibold text-on-primary-container shadow-[0_0_20px_rgba(0,245,160,0.4)] hover:bg-primary-fixed hover:text-on-primary-fixed transition-all" data-path="transmission" href="#transmission">Get in Touch</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
 <button id="mobile-nav-toggle" class="lg:hidden p-2 text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-2xl">menu</span></button>
 </div></div>
 <div id="mobile-nav" class="hidden flex-col gap-2 p-4 bg-surface-container-lowest/95 backdrop-blur-xl border-t border-outline-variant/10 lg:hidden">
@@ -202,8 +223,9 @@
   <a class="px-3 py-2 text-sm font-label-code text-on-surface hover:text-primary" href="#vision">01 Vision</a>
   <a class="px-3 py-2 text-sm font-label-code text-on-surface hover:text-primary" href="#systems">02 Systems</a>
   <a class="px-3 py-2 text-sm font-label-code text-on-surface hover:text-primary" href="#matrix">03 Matrix</a>
-  <a class="px-3 py-2 text-sm font-label-code text-on-surface hover:text-primary" href="#odyssey">04 Odyssey</a>
-  <a class="px-3 py-2 text-sm font-label-code text-on-surface hover:text-primary" href="#transmission">05 Transmission</a>
+  <a class="px-3 py-2 text-sm font-label-code text-on-surface hover:text-primary" href="#experience">04 Experience</a>
+  <a class="px-3 py-2 text-sm font-label-code text-on-surface hover:text-primary" href="#education">05 Education</a>
+  <a class="px-3 py-2 text-sm font-label-code text-on-surface hover:text-primary" href="#transmission">06 Transmission</a>
 </div>
 </header><main class="w-full pt-20 bg-background min-h-screen relative overflow-hidden"><div class="flex flex-col w-full relative">
 <!-- Interactive Background 3D WebGL Scene Hook -->
@@ -214,197 +236,229 @@
 <div id="threejs-container-ANIMATION_6" style="width:100%;height:100%"></div>
 <script>
 (function() {
-  // Three.js interactive 3D narrative visualization
   const container = document.getElementById('three-canvas-container') || document.getElementById('threejs-container-ANIMATION_6') || document.body;
-  const devicePixelRatio = window.devicePixelRatio || 1;
-const width = container.clientWidth || window.innerWidth;
-const height = container.clientHeight || window.innerHeight;
+  const width = container.clientWidth || window.innerWidth;
+  const height = container.clientHeight || window.innerHeight;
 
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 1000);
-camera.position.set(0, 0, 18);
+  const scene = new THREE.Scene();
+  scene.fog = new THREE.FogExp2(0x0f131b, 0.018);
 
-const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: 'high-performance' });
-renderer.setSize(width, height);
-renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-container.appendChild(renderer.domElement);
+  const camera = new THREE.PerspectiveCamera(55, width / height, 0.1, 1000);
+  camera.position.set(0, 0, 18);
 
-// Ambient & dynamic point lights with theme colors (Emerald & Electric Violet)
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
-scene.add(ambientLight);
+  const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: 'high-performance' });
+  renderer.setSize(width, height);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  container.appendChild(renderer.domElement);
 
-const pointLight1 = new THREE.PointLight(0x00f5a0, 3.5, 50);
-pointLight1.position.set(10, 12, 10);
-scene.add(pointLight1);
+  // Dynamic Ambient & Point Lights
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+  scene.add(ambientLight);
 
-const pointLight2 = new THREE.PointLight(0x6366f1, 3.0, 50);
-pointLight2.position.set(-12, -8, 8);
-scene.add(pointLight2);
+  const pointLight1 = new THREE.PointLight(0x00f5a0, 4.0, 60);
+  pointLight1.position.set(12, 14, 10);
+  scene.add(pointLight1);
 
-// Group that reacts to narrative scrolling and mouse moves
-const storyWorld = new THREE.Group();
-scene.add(storyWorld);
+  const pointLight2 = new THREE.PointLight(0x6366f1, 3.5, 60);
+  pointLight2.position.set(-14, -10, 8);
+  scene.add(pointLight2);
 
-// Chapter 1: Neural Core (Central Polyhedral Core & Orbiting Particles)
-const coreGroup = new THREE.Group();
-storyWorld.add(coreGroup);
+  const pointLight3 = new THREE.PointLight(0x38bdf8, 3.0, 50);
+  pointLight3.position.set(0, -18, 12);
+  scene.add(pointLight3);
 
-const icosaGeo = new THREE.IcosahedronGeometry(3.6, 2);
-const icosaMat = new THREE.MeshStandardMaterial({
-  color: 0x0a1626,
-  emissive: 0x00f5a0,
-  emissiveIntensity: 0.25,
-  roughness: 0.2,
-  metalness: 0.85,
-  wireframe: true
-});
-const coreMesh = new THREE.Mesh(icosaGeo, icosaMat);
-coreGroup.add(coreMesh);
+  // Master World Group
+  const storyWorld = new THREE.Group();
+  scene.add(storyWorld);
 
-// Inner glowing energy sphere
-const innerGeo = new THREE.SphereGeometry(2.0, 24, 24);
-const innerMat = new THREE.MeshBasicMaterial({
-  color: 0x00f5a0,
-  wireframe: false,
-  transparent: true,
-  opacity: 0.35
-});
-const innerCore = new THREE.Mesh(innerGeo, innerMat);
-coreGroup.add(innerCore);
+  // 1. Central Quantum Core
+  const coreGroup = new THREE.Group();
+  storyWorld.add(coreGroup);
 
-// Surrounding floating data nodes (Synaptic constellation)
-const particleCount = 280;
-const particlePositions = new Float32Array(particleCount * 3);
-const particleColors = new Float32Array(particleCount * 3);
-
-const colorEmerald = new THREE.Color(0x00f5a0);
-const colorViolet = new THREE.Color(0x818cf8);
-const colorCyan = new THREE.Color(0x38bdf8);
-
-for (let i = 0; i < particleCount; i++) {
-  const radius = 5.5 + Math.random() * 8.5;
-  const theta = Math.random() * Math.PI * 2;
-  const phi = Math.acos((Math.random() * 2) - 1);
-
-  particlePositions[i * 3] = radius * Math.sin(phi) * Math.cos(theta);
-  particlePositions[i * 3 + 1] = radius * Math.sin(phi) * Math.sin(theta);
-  particlePositions[i * 3 + 2] = radius * Math.cos(phi);
-
-  const mixedColor = Math.random() > 0.5 ? colorEmerald : (Math.random() > 0.5 ? colorViolet : colorCyan);
-  particleColors[i * 3] = mixedColor.r;
-  particleColors[i * 3 + 1] = mixedColor.g;
-  particleColors[i * 3 + 2] = mixedColor.b;
-}
-
-const particleGeo = new THREE.BufferGeometry();
-particleGeo.setAttribute('position', new THREE.BufferAttribute(particlePositions, 3));
-particleGeo.setAttribute('color', new THREE.BufferAttribute(particleColors, 3));
-
-const particleMat = new THREE.PointsMaterial({
-  size: 0.16,
-  vertexColors: true,
-  transparent: true,
-  opacity: 0.85,
-  blending: THREE.AdditiveBlending
-});
-const pointCloud = new THREE.Points(particleGeo, particleMat);
-coreGroup.add(pointCloud);
-
-// Chapter 2: Floating Engineered Architecture Rings / Discs
-const ringsGroup = new THREE.Group();
-ringsGroup.position.set(0, -2, 0);
-storyWorld.add(ringsGroup);
-
-for (let r = 0; r < 3; r++) {
-  const ringGeo = new THREE.TorusGeometry(5.2 + r * 2.2, 0.04, 16, 100);
-  const ringMat = new THREE.MeshBasicMaterial({
-    color: r % 2 === 0 ? 0x00f5a0 : 0x6366f1,
-    transparent: true,
-    opacity: 0.45,
+  const icosaGeo = new THREE.IcosahedronGeometry(3.8, 2);
+  const icosaMat = new THREE.MeshStandardMaterial({
+    color: 0x08101a,
+    emissive: 0x00f5a0,
+    emissiveIntensity: 0.35,
+    roughness: 0.15,
+    metalness: 0.9,
     wireframe: true
   });
-  const ringMesh = new THREE.Mesh(ringGeo, ringMat);
-  ringMesh.rotation.x = Math.PI / 2.5 + r * 0.35;
-  ringMesh.rotation.y = r * 0.5;
-  ringsGroup.add(ringMesh);
-}
+  const coreMesh = new THREE.Mesh(icosaGeo, icosaMat);
+  coreGroup.add(coreMesh);
 
-// Interactive mouse parallax & scroll mapping
-let mouseX = 0;
-let mouseY = 0;
-let targetX = 0;
-let targetY = 0;
-let scrollProgress = 0;
+  // Inner pulsing core sphere
+  const innerGeo = new THREE.SphereGeometry(2.1, 32, 32);
+  const innerMat = new THREE.MeshBasicMaterial({
+    color: 0x00f5a0,
+    wireframe: false,
+    transparent: true,
+    opacity: 0.38
+  });
+  const innerCore = new THREE.Mesh(innerGeo, innerMat);
+  coreGroup.add(innerCore);
 
-window.addEventListener('mousemove', (e) => {
-  mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
-  mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
-});
+  // 2. Orbital Constellation Particle Cloud (Depth Field)
+  const particleCount = 450;
+  const particlePositions = new Float32Array(particleCount * 3);
+  const particleColors = new Float32Array(particleCount * 3);
 
-window.addEventListener('scroll', () => {
-  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-  if (maxScroll > 0) {
-    scrollProgress = window.scrollY / maxScroll;
+  const colorEmerald = new THREE.Color(0x00f5a0);
+  const colorViolet = new THREE.Color(0x818cf8);
+  const colorCyan = new THREE.Color(0x38bdf8);
+
+  for (let i = 0; i < particleCount; i++) {
+    const radius = 4.5 + Math.random() * 16.0;
+    const theta = Math.random() * Math.PI * 2;
+    const phi = Math.acos((Math.random() * 2) - 1);
+
+    particlePositions[i * 3] = radius * Math.sin(phi) * Math.cos(theta);
+    particlePositions[i * 3 + 1] = radius * Math.sin(phi) * Math.sin(theta);
+    particlePositions[i * 3 + 2] = radius * Math.cos(phi);
+
+    const rVal = Math.random();
+    const mixedColor = rVal > 0.6 ? colorEmerald : (rVal > 0.3 ? colorViolet : colorCyan);
+    particleColors[i * 3] = mixedColor.r;
+    particleColors[i * 3 + 1] = mixedColor.g;
+    particleColors[i * 3 + 2] = mixedColor.b;
   }
-}, { passive: true });
 
-window.addEventListener('resize', () => {
-  const w = container.clientWidth || window.innerWidth;
-  const h = container.clientHeight || window.innerHeight;
-  camera.aspect = w / h;
-  camera.updateProjectionMatrix();
-  renderer.setSize(w, h);
-});
+  const particleGeo = new THREE.BufferGeometry();
+  particleGeo.setAttribute('position', new THREE.BufferAttribute(particlePositions, 3));
+  particleGeo.setAttribute('color', new THREE.BufferAttribute(particleColors, 3));
 
-// Render Animation Loop
-let clock = new THREE.Clock();
+  const particleMat = new THREE.PointsMaterial({
+    size: 0.18,
+    vertexColors: true,
+    transparent: true,
+    opacity: 0.85,
+    blending: THREE.AdditiveBlending
+  });
+  const pointCloud = new THREE.Points(particleGeo, particleMat);
+  storyWorld.add(pointCloud);
 
-function animate() {
-  requestAnimationFrame(animate);
-  const elapsedTime = clock.getElapsedTime();
+  // 3. Floating Gyroscope Orbital Rings
+  const ringsGroup = new THREE.Group();
+  storyWorld.add(ringsGroup);
 
-  // Subtle mouse smoothing
-  targetX += (mouseX - targetX) * 0.05;
-  targetY += (mouseY - targetY) * 0.05;
+  const ringMeshes = [];
+  for (let r = 0; r < 4; r++) {
+    const ringGeo = new THREE.TorusGeometry(5.0 + r * 2.0, 0.045, 16, 120);
+    const ringMat = new THREE.MeshBasicMaterial({
+      color: r % 2 === 0 ? 0x00f5a0 : 0x6366f1,
+      transparent: true,
+      opacity: 0.5,
+      wireframe: true
+    });
+    const ringMesh = new THREE.Mesh(ringGeo, ringMat);
+    ringMesh.rotation.x = (Math.PI / 4) + r * 0.45;
+    ringMesh.rotation.y = r * 0.7;
+    ringsGroup.add(ringMesh);
+    ringMeshes.push(ringMesh);
+  }
 
-  // Narrative camera & scene choreography based on scroll progress (0.0 to 1.0)
-  // Chapter 0 (Hero): Centered, spinning neural core
-  // Chapter 1 (Deep Learning Genesis): Core shifts left, zooms in
-  // Chapter 2 (Engineered Systems): Shifts right, tilts down into architectural disc view
-  // Chapter 3 (Tech Stack Matrix): Deep perspective, rings expand
-  // Chapter 4 (Career Odyssey & Finale): Elevates upward to horizon view
+  // 4. Auxiliary Floating Satellite Geometric Clusters
+  const satelliteGroup = new THREE.Group();
+  storyWorld.add(satelliteGroup);
 
-  const scrollFactor = scrollProgress * Math.PI * 2;
+  const satGeo1 = new THREE.OctahedronGeometry(1.6, 1);
+  const satMat1 = new THREE.MeshBasicMaterial({ color: 0x38bdf8, wireframe: true, transparent: true, opacity: 0.4 });
+  const sat1 = new THREE.Mesh(satGeo1, satMat1);
+  sat1.position.set(-11, 6, -5);
+  satelliteGroup.add(sat1);
 
-  coreMesh.rotation.x = elapsedTime * 0.15 + scrollProgress * 2.5;
-  coreMesh.rotation.y = elapsedTime * 0.22 + scrollProgress * 3.0;
+  const satGeo2 = new THREE.DodecahedronGeometry(1.4, 0);
+  const satMat2 = new THREE.MeshBasicMaterial({ color: 0x818cf8, wireframe: true, transparent: true, opacity: 0.45 });
+  const sat2 = new THREE.Mesh(satGeo2, satMat2);
+  sat2.position.set(12, -7, -4);
+  satelliteGroup.add(sat2);
 
-  innerCore.scale.setScalar(1 + Math.sin(elapsedTime * 2.5) * 0.12);
+  // Interactive mouse parallax & scroll mapping
+  let mouseX = 0;
+  let mouseY = 0;
+  let targetX = 0;
+  let targetY = 0;
+  let scrollProgress = 0;
 
-  pointCloud.rotation.y = -elapsedTime * 0.08 + scrollProgress * 1.5;
-  pointCloud.rotation.z = elapsedTime * 0.04;
+  window.addEventListener('mousemove', (e) => {
+    mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+    mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+  });
 
-  ringsGroup.rotation.z = elapsedTime * 0.12 - scrollProgress * 2.0;
-  ringsGroup.rotation.x = Math.PI / 3 + Math.sin(elapsedTime * 0.5) * 0.1 + scrollProgress * 1.2;
+  window.addEventListener('scroll', () => {
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    if (maxScroll > 0) {
+      scrollProgress = window.scrollY / maxScroll;
+    }
+  }, { passive: true });
 
-  // Fluid story camera choreography
-  const targetCamX = Math.sin(scrollProgress * Math.PI * 1.8) * 4.5 + targetX * 1.2;
-  const targetCamY = -scrollProgress * 6.0 - targetY * 1.0;
-  const targetCamZ = 18 - Math.sin(scrollProgress * Math.PI) * 4.0;
+  window.addEventListener('resize', () => {
+    const w = container.clientWidth || window.innerWidth;
+    const h = container.clientHeight || window.innerHeight;
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+    renderer.setSize(w, h);
+  });
 
-  camera.position.x += (targetCamX - camera.position.x) * 0.06;
-  camera.position.y += (targetCamY - camera.position.y) * 0.06;
-  camera.position.z += (targetCamZ - camera.position.z) * 0.06;
-  camera.lookAt(0, -scrollProgress * 3.0, 0);
+  // Render Loop with 3D Cinematic Choreography Across 7 Chapters
+  const clock = new THREE.Clock();
 
-  // Dynamic color pulse on point lights
-  pointLight1.intensity = 3.0 + Math.sin(elapsedTime * 2.0) * 0.8;
-  pointLight2.intensity = 2.5 + Math.cos(elapsedTime * 1.8) * 0.7;
+  function animate() {
+    requestAnimationFrame(animate);
+    const elapsedTime = clock.getElapsedTime();
 
-  renderer.render(scene, camera);
-}
+    // Mouse smoothing
+    targetX += (mouseX - targetX) * 0.06;
+    targetY += (mouseY - targetY) * 0.06;
 
-animate();
+    // 3D Rotations tied to time and scroll progress
+    coreMesh.rotation.x = elapsedTime * 0.18 + scrollProgress * 3.5;
+    coreMesh.rotation.y = elapsedTime * 0.25 + scrollProgress * 4.0;
+    innerCore.scale.setScalar(1 + Math.sin(elapsedTime * 2.8) * 0.14);
+
+    pointCloud.rotation.y = -elapsedTime * 0.06 + scrollProgress * 2.2;
+    pointCloud.rotation.x = Math.sin(elapsedTime * 0.2) * 0.2;
+
+    ringsGroup.rotation.z = elapsedTime * 0.14 - scrollProgress * 2.5;
+    ringsGroup.rotation.x = Math.PI / 3 + Math.sin(elapsedTime * 0.6) * 0.15 + scrollProgress * 1.8;
+
+    ringMeshes.forEach((rm, idx) => {
+      rm.rotation.z += 0.002 * (idx + 1);
+      rm.rotation.y += 0.001 * (idx + 1);
+    });
+
+    sat1.rotation.x = elapsedTime * 0.4 + scrollProgress * 2.0;
+    sat1.rotation.y = elapsedTime * 0.3;
+    sat2.rotation.x = -elapsedTime * 0.3 + scrollProgress * 2.0;
+    sat2.rotation.z = elapsedTime * 0.4;
+
+    // Fluid story camera flight path across 7 chapters:
+    // Chapter 0 (Prologue): Centered deep perspective
+    // Chapter 1 (Vision): Swoops right, zooms near tensor mesh
+    // Chapter 2 (Systems): Shifts left, tilts up into orbital ring plane
+    // Chapter 3 (Matrix): Expands wide perspective, particle acceleration
+    // Chapter 4 (Experience): Deep left architectural flyby
+    // Chapter 5 (Education): Tilts down toward mathematical crystal
+    // Chapter 6 (Transmission): Ascends smoothly into starry horizon
+
+    const camX = Math.sin(scrollProgress * Math.PI * 2.4) * 6.5 + targetX * 1.5;
+    const camY = -scrollProgress * 9.0 - targetY * 1.2;
+    const camZ = 18 - Math.sin(scrollProgress * Math.PI * 1.5) * 5.5;
+
+    camera.position.x += (camX - camera.position.x) * 0.06;
+    camera.position.y += (camY - camera.position.y) * 0.06;
+    camera.position.z += (camZ - camera.position.z) * 0.06;
+    camera.lookAt(0, -scrollProgress * 4.5, 0);
+
+    // Dynamic light pulsing
+    pointLight1.intensity = 3.5 + Math.sin(elapsedTime * 2.2) * 1.0;
+    pointLight2.intensity = 3.0 + Math.cos(elapsedTime * 1.9) * 0.8;
+    pointLight3.intensity = 2.5 + Math.sin(elapsedTime * 1.5) * 0.7;
+
+    renderer.render(scene, camera);
+  }
+
+  animate();
 })();
 </script>
 </div>
@@ -435,12 +489,16 @@ animate();
 <span class="font-label-code text-label-code text-on-surface-variant group-hover:text-primary transition-colors opacity-60 group-hover:opacity-100">03 Matrix</span>
 <span class="w-2.5 h-2.5 rounded-full bg-surface-variant transition-all duration-300 ring-2 ring-transparent group-hover:bg-primary-container group-hover:shadow-[0_0_10px_#00f5a0]"></span>
 </a>
-<a class="nav-compass-item group flex items-center justify-end gap-space-sm text-right transition-all" data-target="odyssey" href="#odyssey">
-<span class="font-label-code text-label-code text-on-surface-variant group-hover:text-primary transition-colors opacity-60 group-hover:opacity-100">04 Odyssey</span>
+<a class="nav-compass-item group flex items-center justify-end gap-space-sm text-right transition-all" data-target="experience" href="#experience">
+<span class="font-label-code text-label-code text-on-surface-variant group-hover:text-primary transition-colors opacity-60 group-hover:opacity-100">04 Experience</span>
+<span class="w-2.5 h-2.5 rounded-full bg-surface-variant transition-all duration-300 ring-2 ring-transparent group-hover:bg-primary-container group-hover:shadow-[0_0_10px_#00f5a0]"></span>
+</a>
+<a class="nav-compass-item group flex items-center justify-end gap-space-sm text-right transition-all" data-target="education" href="#education">
+<span class="font-label-code text-label-code text-on-surface-variant group-hover:text-primary transition-colors opacity-60 group-hover:opacity-100">05 Education</span>
 <span class="w-2.5 h-2.5 rounded-full bg-surface-variant transition-all duration-300 ring-2 ring-transparent group-hover:bg-primary-container group-hover:shadow-[0_0_10px_#00f5a0]"></span>
 </a>
 <a class="nav-compass-item group flex items-center justify-end gap-space-sm text-right transition-all" data-target="transmission" href="#transmission">
-<span class="font-label-code text-label-code text-on-surface-variant group-hover:text-primary transition-colors opacity-60 group-hover:opacity-100">05 Transmission</span>
+<span class="font-label-code text-label-code text-on-surface-variant group-hover:text-primary transition-colors opacity-60 group-hover:opacity-100">06 Transmission</span>
 <span class="w-2.5 h-2.5 rounded-full bg-surface-variant transition-all duration-300 ring-2 ring-transparent group-hover:bg-primary-container group-hover:shadow-[0_0_10px_#00f5a0]"></span>
 </a>
 </nav>
@@ -1037,82 +1095,100 @@ animate();
 </div>
 </section>
 <!-- ==========================================
-       SECTION 04 // THE TECHNICAL ODYSSEY (Career)
+       SECTION 04 // THE INDUSTRIAL ODYSSEY (Experience)
        ========================================== -->
-<section class="relative z-10 w-full px-gutter-mobile md:px-margin py-28" id="odyssey">
+<section class="relative z-10 w-full px-gutter-mobile md:px-margin py-28" id="experience">
 <div class="max-w-[1240px] w-full mx-auto">
 <!-- Section Header -->
 <div class="flex flex-col items-start mb-space-xl">
 <div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded bg-surface-container-low shadow-sm">
-<span class="font-telemetry-xs text-telemetry-xs uppercase tracking-widest text-primary">CHAPTER 04 // THE TECHNICAL ODYSSEY</span>
+<span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_#00f5a0]"></span>
+<span class="font-telemetry-xs text-telemetry-xs uppercase tracking-widest text-primary">CHAPTER 04 // INDUSTRIAL EXPEDITIONS &amp; APPLIED AI</span>
 </div>
 <h2 class="mt-space-sm font-headline-lg text-headline-lg text-on-surface tracking-tight">
-          Chronicles of Rigor, Code &amp; Education.
+          Practical Integration &amp; Real-World Deployment.
         </h2>
 <p class="mt-space-xs font-body-md text-body-md text-on-surface-variant max-w-2xl">
-          The timeline bridging algorithmic foundations at premier institutions to high-tempo software development environments.
+          Hands-on software and machine learning engineering experience, building high-throughput computer vision models, data science pipelines, and production systems.
         </p>
 </div>
-<!-- Chronological Story Timeline -->
-<div class="relative pl-6 md:pl-10 space-y-space-xl before:absolute before:left-[11px] md:before:left-[19px] before:top-3 before:bottom-3 before:w-[2px] before:bg-gradient-to-b before:from-primary-container before:via-secondary before:to-surface-variant">
-<!-- Milestone 1: RankSol (Computer Vision & AI Integration Intern) -->
-<div class="relative group">
+
+<!-- Chronological Experience Timeline -->
+<div class="relative pl-6 md:pl-10 space-y-space-xl before:absolute before:left-[11px] md:before:left-[19px] before:top-3 before:bottom-3 before:w-[2px] before:bg-gradient-to-b before:from-primary-container via-secondary to-surface-variant">
+
+<!-- Milestone 1: RankSol -->
+<div class="relative group tilt-card">
 <div class="absolute -left-[30px] md:-left-[42px] top-1.5 w-4 h-4 rounded-full bg-primary-container shadow-[0_0_12px_#00f5a0] ring-4 ring-background"></div>
-<div class="bg-surface-container-lowest/80 backdrop-blur-xl p-space-lg rounded-xl shadow-xl hover:shadow-2xl transition-all">
+<div class="bg-surface-container-lowest/80 backdrop-blur-xl p-space-lg rounded-xl shadow-xl hover:shadow-2xl transition-all border border-outline-variant/10 hover:border-primary-container/40">
 <div class="flex flex-wrap items-center justify-between gap-2">
 <div class="flex items-center gap-space-sm">
 <span class="font-telemetry-xs text-telemetry-xs px-2 py-0.5 rounded bg-primary-container/10 text-primary uppercase">JUN 2026 — AUG 2026 // VISION &amp; AI INTEGRATION</span>
 <span class="font-headline-sm text-headline-sm font-bold text-on-surface">Computer Vision &amp; AI Integration Intern</span>
 </div>
-<span class="font-label-code text-label-code text-on-surface-variant">RankSol • Faisalabad, Pakistan</span>
+<span class="font-label-code text-label-code text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">location_on</span> RankSol • Faisalabad, Pakistan</span>
 </div>
 <p class="mt-space-sm font-body-md text-body-md text-on-surface-variant">
               Trained and fine-tuned computer vision models for object detection and image recognition tasks. Integrated AI capabilities into real-world applications, collaborating closely with the engineering team on Python-based model deployment.
             </p>
-<button class="mt-space-md text-primary font-label-code text-label-code inline-flex items-center gap-1 hover:text-primary-container transition-colors" onclick="toggleBriefing('briefing-1')">
-<span id="briefing-1-btn-text">Expand Chapter Briefing</span>
-<span class="material-symbols-outlined text-[16px]" id="briefing-1-icon">expand_more</span>
+<div class="mt-space-md flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container text-[10px] font-label-code font-bold text-primary rounded-full uppercase border border-primary-container/20">Computer Vision</span>
+<span class="px-3 py-1 bg-surface-container text-[10px] font-label-code font-bold text-primary rounded-full uppercase border border-primary-container/20">Object Detection</span>
+<span class="px-3 py-1 bg-surface-container text-[10px] font-label-code font-bold text-primary rounded-full uppercase border border-primary-container/20">Image Recognition</span>
+<span class="px-3 py-1 bg-surface-container text-[10px] font-label-code font-bold text-primary rounded-full uppercase border border-primary-container/20">Python</span>
+<span class="px-3 py-1 bg-surface-container text-[10px] font-label-code font-bold text-primary rounded-full uppercase border border-primary-container/20">AI Integration</span>
+</div>
+<button class="mt-space-md text-primary font-label-code text-label-code inline-flex items-center gap-1 hover:text-primary-container transition-colors" onclick="toggleBriefing('exp-briefing-1')">
+<span id="exp-briefing-1-btn-text">Expand Chapter Briefing</span>
+<span class="material-symbols-outlined text-[16px]" id="exp-briefing-1-icon">expand_more</span>
 </button>
 <!-- Accordion Drawer -->
-<div class="hidden mt-space-md p-space-md rounded bg-surface-container space-y-2 text-body-sm font-body-sm text-on-surface-variant" id="briefing-1">
+<div class="hidden mt-space-md p-space-md rounded bg-surface-container space-y-2 text-body-sm font-body-sm text-on-surface-variant" id="exp-briefing-1">
 <div class="flex items-start gap-2">
 <span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
 <span>Trained and fine-tuned state-of-the-art computer vision models for high-accuracy object detection and image recognition.</span>
 </div>
 <div class="flex items-start gap-2">
 <span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
-<span>Integrated AI capabilities into live production software, working with the engineering team on Python development &amp; performance benchmarks.</span>
+<span>Integrated AI capabilities into live production software, working with the engineering team on Python development &amp; model evaluation.</span>
 </div>
 <div class="flex items-start gap-2">
 <span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
-<span>Supported practical deployment of AI-driven solutions across multi-system enterprise architectures.</span>
+<span>Supported the practical deployment of AI-driven solutions and contributed to integrating AI models into existing systems across multiple projects.</span>
 </div>
 </div>
 </div>
 </div>
-<!-- Milestone 2: Elevvo Pathways (Data Science Intern) -->
-<div class="relative group">
+
+<!-- Milestone 2: Elevvo Pathways -->
+<div class="relative group tilt-card">
 <div class="absolute -left-[30px] md:-left-[42px] top-1.5 w-4 h-4 rounded-full bg-secondary shadow-[0_0_12px_#c0c1ff] ring-4 ring-background"></div>
-<div class="bg-surface-container-lowest/80 backdrop-blur-xl p-space-lg rounded-xl shadow-xl hover:shadow-2xl transition-all">
+<div class="bg-surface-container-lowest/80 backdrop-blur-xl p-space-lg rounded-xl shadow-xl hover:shadow-2xl transition-all border border-outline-variant/10 hover:border-secondary/40">
 <div class="flex flex-wrap items-center justify-between gap-2">
 <div class="flex items-center gap-space-sm">
 <span class="font-telemetry-xs text-telemetry-xs px-2 py-0.5 rounded bg-secondary-container/30 text-secondary uppercase">FEB 2026 — MAR 2026 // DATA SCIENCE &amp; CNN</span>
 <span class="font-headline-sm text-headline-sm font-bold text-on-surface">Data Science Intern</span>
 </div>
-<span class="font-label-code text-label-code text-on-surface-variant">Elevvo Pathways • Faisalabad, Pakistan</span>
+<span class="font-label-code text-label-code text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">location_on</span> Elevvo Pathways • Faisalabad, Pakistan</span>
 </div>
 <p class="mt-space-sm font-body-md text-body-md text-on-surface-variant">
-              Leveraged TensorFlow and Keras to develop high-accuracy Convolutional Neural Networks (CNN) for image classification. Applied Linear Regression and advanced statistical methods, implementing data science pipelines with 30x30 image normalization.
+              Leveraged TensorFlow and Keras to develop high-accuracy Convolutional Neural Networks (CNN) for image classification. Applied Linear Regression and advanced statistical methods, implementing complex data science pipelines.
             </p>
-<button class="mt-space-md text-secondary font-label-code text-label-code inline-flex items-center gap-1 hover:text-on-surface transition-colors" onclick="toggleBriefing('briefing-2')">
-<span id="briefing-2-btn-text">Expand Chapter Briefing</span>
-<span class="material-symbols-outlined text-[16px]" id="briefing-2-icon">expand_more</span>
+<div class="mt-space-md flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container text-[10px] font-label-code font-bold text-secondary rounded-full uppercase border border-secondary/20">TensorFlow</span>
+<span class="px-3 py-1 bg-surface-container text-[10px] font-label-code font-bold text-secondary rounded-full uppercase border border-secondary/20">Keras</span>
+<span class="px-3 py-1 bg-surface-container text-[10px] font-label-code font-bold text-secondary rounded-full uppercase border border-secondary/20">CNN</span>
+<span class="px-3 py-1 bg-surface-container text-[10px] font-label-code font-bold text-secondary rounded-full uppercase border border-secondary/20">Linear Regression</span>
+<span class="px-3 py-1 bg-surface-container text-[10px] font-label-code font-bold text-secondary rounded-full uppercase border border-secondary/20">Data Pipelines</span>
+</div>
+<button class="mt-space-md text-secondary font-label-code text-label-code inline-flex items-center gap-1 hover:text-on-surface transition-colors" onclick="toggleBriefing('exp-briefing-2')">
+<span id="exp-briefing-2-btn-text">Expand Chapter Briefing</span>
+<span class="material-symbols-outlined text-[16px]" id="exp-briefing-2-icon">expand_more</span>
 </button>
 <!-- Accordion Drawer -->
-<div class="hidden mt-space-md p-space-md rounded bg-surface-container space-y-2 text-body-sm font-body-sm text-on-surface-variant" id="briefing-2">
+<div class="hidden mt-space-md p-space-md rounded bg-surface-container space-y-2 text-body-sm font-body-sm text-on-surface-variant" id="exp-briefing-2">
 <div class="flex items-start gap-2">
 <span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check_circle</span>
-<span>Leveraged TensorFlow and Keras to develop high-accuracy Convolutional Neural Networks (CNN) for image classification.</span>
+<span>Leveraged TensorFlow and Keras to develop high-accuracy Convolutional Neural Networks (CNN) for image classification tasks.</span>
 </div>
 <div class="flex items-start gap-2">
 <span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check_circle</span>
@@ -1120,48 +1196,93 @@ animate();
 </div>
 <div class="flex items-start gap-2">
 <span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check_circle</span>
-<span>Implemented complex Data Science pipelines ensuring 30x30 normalization for image consistency across training and production.</span>
+<span>Implemented complex Data Science pipelines ensuring 30×30 normalization for image consistency across training and production environments.</span>
 </div>
 </div>
 </div>
 </div>
-<!-- Milestone 3: FAST-NUCES -->
-<div class="relative group">
-<div class="absolute -left-[30px] md:-left-[42px] top-1.5 w-4 h-4 rounded-full bg-surface-variant ring-4 ring-background"></div>
-<div class="bg-surface-container-lowest/80 backdrop-blur-xl p-space-lg rounded-xl shadow-xl hover:shadow-2xl transition-all">
-<div class="flex flex-wrap items-center justify-between gap-2">
-<div class="flex items-center gap-space-sm">
-<span class="font-telemetry-xs text-telemetry-xs px-2 py-0.5 rounded bg-surface-container text-on-surface-variant uppercase">2024 - 2028 // ACADEMIC GENESIS</span>
-<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Bachelor of Computer Science (Level in EQF: 6)</span>
-</div>
-<span class="font-label-code text-label-code text-on-surface-variant">National University of Computer and Emerging Sciences (NUCES) • Peshawar, Pakistan</span>
-</div>
-<p class="mt-space-sm font-body-md text-body-md text-on-surface-variant">
-              Core academic immersion in Data Structures &amp; Algorithms, Object-Oriented Programming (OOP), Discrete Mathematics, Database Systems, and Digital Logic Design.
-            </p>
-</div>
-</div>
-<!-- Milestone 4: Beaconhouse -->
-<div class="relative group">
-<div class="absolute -left-[30px] md:-left-[42px] top-1.5 w-4 h-4 rounded-full bg-surface-variant ring-4 ring-background"></div>
-<div class="bg-surface-container-lowest/80 backdrop-blur-xl p-space-lg rounded-xl shadow-xl hover:shadow-2xl transition-all">
-<div class="flex flex-wrap items-center justify-between gap-2">
-<div class="flex items-center gap-space-sm">
-<span class="font-telemetry-xs text-telemetry-xs px-2 py-0.5 rounded bg-surface-container text-on-surface-variant uppercase">2021 - 2023 // FOUNDATION</span>
-<span class="font-headline-sm text-headline-sm font-bold text-on-surface">A Levels, Computer Science (Level in EQF: 4)</span>
-</div>
-<span class="font-label-code text-label-code text-on-surface-variant">Beaconhouse • Faisalabad, Pakistan</span>
-</div>
-<p class="mt-space-sm font-body-md text-body-md text-on-surface-variant">
-              Specialized coursework in Computer Science, Mathematics, and Physics with early emphasis on computational logic and programmatic problem solving.
-            </p>
-</div>
-</div>
+
 </div>
 </div>
 </section>
 <!-- ==========================================
-       SECTION 05 // EPILOGUE & TRANSMISSION (Contact)
+       SECTION 05 // ACADEMIC FOUNDATIONS (Education)
+       ========================================== -->
+<section class="relative z-10 w-full px-gutter-mobile md:px-margin py-28" id="education">
+<div class="max-w-[1240px] w-full mx-auto">
+<!-- Section Header -->
+<div class="flex flex-col items-start mb-space-xl">
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded bg-surface-container-low shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_#c0c1ff]"></span>
+<span class="font-telemetry-xs text-telemetry-xs uppercase tracking-widest text-secondary">CHAPTER 05 // ACADEMIC FOUNDATIONS &amp; THEORIES</span>
+</div>
+<h2 class="mt-space-sm font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Rigorous Computer Science &amp; Engineering Foundations.
+        </h2>
+<p class="mt-space-xs font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          Formal academic training at leading institutions, grounding engineering practices in discrete mathematics, algorithms, and computational theory.
+        </p>
+</div>
+
+<!-- Chronological Education Timeline -->
+<div class="relative pl-6 md:pl-10 space-y-space-xl before:absolute before:left-[11px] md:before:left-[19px] before:top-3 before:bottom-3 before:w-[2px] before:bg-gradient-to-b before:from-secondary via-primary to-surface-variant">
+
+<!-- Academic 1: FAST-NUCES -->
+<div class="relative group tilt-card">
+<div class="absolute -left-[30px] md:-left-[42px] top-1.5 w-4 h-4 rounded-full bg-secondary shadow-[0_0_12px_#c0c1ff] ring-4 ring-background"></div>
+<div class="bg-surface-container-lowest/80 backdrop-blur-xl p-space-lg rounded-xl shadow-xl hover:shadow-2xl transition-all border border-outline-variant/10 hover:border-secondary/40">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-space-sm">
+<span class="font-telemetry-xs text-telemetry-xs px-2 py-0.5 rounded bg-surface-container text-secondary uppercase font-bold">19/08/2024 — PRESENT // UNDERGRADUATE</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Bachelor of Computer Science</span>
+</div>
+<span class="font-label-code text-label-code text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">school</span> NUCES • Peshawar, Pakistan</span>
+</div>
+<p class="mt-space-sm font-body-md text-body-md text-on-surface-variant">
+              Pursuing Bachelor of Computer Science with specialization in Data Science and Artificial Intelligence. Deep focus on core theoretical foundations and advanced system development.
+            </p>
+<div class="mt-space-md grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<div class="p-space-sm rounded bg-surface-container">
+<span class="font-telemetry-xs text-telemetry-xs text-on-surface-variant uppercase">Core Coursework</span>
+<p class="font-label-code text-body-sm font-semibold text-primary mt-0.5">DSA, OOP, Database Systems</p>
+</div>
+<div class="p-space-sm rounded bg-surface-container">
+<span class="font-telemetry-xs text-telemetry-xs text-on-surface-variant uppercase">Framework Standard</span>
+<p class="font-label-code text-body-sm font-semibold text-secondary mt-0.5">EQF Level 6 Equivalent</p>
+</div>
+<div class="p-space-sm rounded bg-surface-container">
+<span class="font-telemetry-xs text-telemetry-xs text-on-surface-variant uppercase">Status</span>
+<p class="font-label-code text-body-sm font-semibold text-primary-container mt-0.5 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span> Active Enrollment</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Academic 2: Beaconhouse -->
+<div class="relative group tilt-card">
+<div class="absolute -left-[30px] md:-left-[42px] top-1.5 w-4 h-4 rounded-full bg-surface-variant ring-4 ring-background"></div>
+<div class="bg-surface-container-lowest/80 backdrop-blur-xl p-space-lg rounded-xl shadow-xl hover:shadow-2xl transition-all border border-outline-variant/10 hover:border-surface-bright">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-space-sm">
+<span class="font-telemetry-xs text-telemetry-xs px-2 py-0.5 rounded bg-surface-container text-on-surface-variant uppercase">15/08/2021 — 17/08/2023 // CAMBRIDGE</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">A Levels, Computer Science</span>
+</div>
+<span class="font-label-code text-label-code text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-outline">history_edu</span> Beaconhouse • Faisalabad, Pakistan</span>
+</div>
+<p class="mt-space-sm font-body-md text-body-md text-on-surface-variant">
+              Cambridge International A Levels with specialization in Computer Science, Mathematics, and Physics with high proficiency in computational thinking and programmatic problem solving.
+            </p>
+<div class="mt-space-md inline-flex items-center gap-2 px-space-sm py-1 rounded bg-surface-container font-label-code text-telemetry-xs text-on-surface-variant">
+<span class="text-primary font-bold">LEVEL IN EQF:</span> 4 (Cambridge International Certification)
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+<!-- ==========================================
+       SECTION 06 // EPILOGUE & TRANSMISSION (Contact)
        ========================================== -->
 <section class="relative z-10 w-full px-gutter-mobile md:px-margin py-32" id="transmission">
 <div class="max-w-[1240px] w-full mx-auto">
@@ -1257,14 +1378,16 @@ animate();
     const btnText = document.getElementById(`${id}-btn-text`);
     const icon = document.getElementById(`${id}-icon`);
 
-    if (el.classList.contains('hidden')) {
-      el.classList.remove('hidden');
-      btnText.innerText = 'Collapse Chapter Briefing';
-      icon.innerText = 'expand_less';
-    } else {
-      el.classList.add('hidden');
-      btnText.innerText = 'Expand Chapter Briefing';
-      icon.innerText = 'expand_more';
+    if (el) {
+      if (el.classList.contains('hidden')) {
+        el.classList.remove('hidden');
+        if (btnText) btnText.innerText = 'Collapse Chapter Briefing';
+        if (icon) icon.innerText = 'expand_less';
+      } else {
+        el.classList.add('hidden');
+        if (btnText) btnText.innerText = 'Expand Chapter Briefing';
+        if (icon) icon.innerText = 'expand_more';
+      }
     }
   }
 
@@ -1276,22 +1399,34 @@ animate();
       const icon = document.getElementById('copy-icon');
       const toast = document.getElementById('copy-toast');
 
-      btnText.innerText = 'Address Copied!';
-      icon.innerText = 'done';
-      toast.classList.remove('hidden');
+      if (btnText) btnText.innerText = 'Address Copied!';
+      if (icon) icon.innerText = 'done';
+      if (toast) toast.classList.remove('hidden');
 
       setTimeout(() => {
-        btnText.innerText = 'Copy Terminal';
-        icon.innerText = 'content_copy';
-        toast.classList.add('hidden');
+        if (btnText) btnText.innerText = 'Copy Terminal';
+        if (icon) icon.innerText = 'content_copy';
+        if (toast) toast.classList.add('hidden');
       }, 3500);
     });
   }
 
-  // ScrollSpy for Vertical Floating Narrative Compass
+  // Mobile Nav Toggle
+  const mobileToggle = document.getElementById('mobile-nav-toggle');
+  const mobileNav = document.getElementById('mobile-nav');
+  if (mobileToggle && mobileNav) {
+    mobileToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('open');
+    });
+    mobileNav.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => mobileNav.classList.remove('open'));
+    });
+  }
+
+  // ScrollSpy for Vertical Floating Narrative Compass across all 7 sections
   window.addEventListener('scroll', () => {
-    const sections = ['prologue', 'vision', 'systems', 'matrix', 'odyssey', 'transmission'];
-    const scrollPosition = window.scrollY + 250;
+    const sections = ['prologue', 'vision', 'systems', 'matrix', 'experience', 'education', 'transmission'];
+    const scrollPosition = window.scrollY + 260;
 
     sections.forEach(id => {
       const section = document.getElementById(id);
@@ -1304,29 +1439,44 @@ animate();
         const text = navItem.querySelector('span:first-child');
 
         if (scrollPosition >= top && scrollPosition < top + height) {
-          dot.classList.add('bg-primary-container', 'shadow-[0_0_12px_#00f5a0]', 'scale-125');
-          dot.classList.remove('bg-surface-variant');
-          text.classList.add('text-primary', 'opacity-100', 'font-semibold');
-          text.classList.remove('text-on-surface-variant', 'opacity-60');
+          if (dot) {
+            dot.classList.add('bg-primary-container', 'shadow-[0_0_12px_#00f5a0]', 'scale-125');
+            dot.classList.remove('bg-surface-variant');
+          }
+          if (text) {
+            text.classList.add('text-primary', 'opacity-100', 'font-semibold');
+            text.classList.remove('text-on-surface-variant', 'opacity-60');
+          }
         } else {
-          dot.classList.remove('bg-primary-container', 'shadow-[0_0_12px_#00f5a0]', 'scale-125');
-          dot.classList.add('bg-surface-variant');
-          text.classList.remove('text-primary', 'opacity-100', 'font-semibold');
-          text.classList.add('text-on-surface-variant', 'opacity-60');
+          if (dot) {
+            dot.classList.remove('bg-primary-container', 'shadow-[0_0_12px_#00f5a0]', 'scale-125');
+            dot.classList.add('bg-surface-variant');
+          }
+          if (text) {
+            text.classList.remove('text-primary', 'opacity-100', 'font-semibold');
+            text.classList.add('text-on-surface-variant', 'opacity-60');
+          }
         }
       }
     });
   });
 
-  // Mobile Nav Toggle
-  const mobileToggle = document.getElementById('mobile-nav-toggle');
-  const mobileNav = document.getElementById('mobile-nav');
-  if (mobileToggle && mobileNav) {
-    mobileToggle.addEventListener('click', () => {
-      mobileNav.classList.toggle('open');
-    });
-    mobileNav.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => mobileNav.classList.remove('open'));
+  // 3D Card Interactive Tilt Physics
+  if (window.matchMedia("(pointer: fine)").matches) {
+    document.querySelectorAll('.tilt-card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotX = ((y - centerY) / centerY) * -6;
+        const rotY = ((x - centerX) / centerX) * 6;
+        card.style.transform = `perspective(1000px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateY(-4px)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
     });
   }
 </script></main><footer class="w-full bg-surface-container-lowest py-space-xl"><div class="w-full px-gutter-mobile md:px-margin"><div class="flex flex-col lg:flex-row items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md"><div class="w-2 h-2 rounded bg-primary-container shadow-[0_0_8px_#00F5A0]"></div><div class="flex flex-col"><span class="font-headline-sm text-body-sm font-bold text-on-surface">MUQEET MAHMOOD ARCHITECTURE</span><span class="font-telemetry-xs text-telemetry-xs uppercase text-on-surface-variant">SYS.CORE: QUANTUM // RUNTIME 3D STORY ENGINE</span></div></div><div class="flex flex-wrap items-center justify-center gap-space-lg"><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container"><span class="font-telemetry-xs text-telemetry-xs text-on-surface-variant">LATENCY</span><span class="font-telemetry-xs text-telemetry-xs text-primary">14MS</span></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container"><span class="font-telemetry-xs text-telemetry-xs text-on-surface-variant">COORDINATES</span><span class="font-telemetry-xs text-telemetry-xs text-secondary">37.7749° N, 122.4194° W</span></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container"><span class="font-telemetry-xs text-telemetry-xs text-on-surface-variant">SECURITY</span><span class="font-telemetry-xs text-telemetry-xs text-primary">LEVEL 4 ISOLATED</span></div></div><div class="flex items-center gap-space-md"><span class="font-telemetry-xs text-telemetry-xs text-on-surface-variant uppercase tracking-widest">© 2025 MM.DEV // ALL RIGHTS RESERVED</span></div></div></div></footer></body></html>
