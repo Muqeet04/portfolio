@@ -667,8 +667,8 @@ model = YOLO(<span class="text-secondary">'best_model.pt'</span>)
       </div>
 
       <!-- Skills Category Dropdown (From Video) -->
-      <div class="mb-8 max-w-md mx-auto relative">
-        <button onclick="toggleSkillsDropdown()" class="w-full flex items-center justify-between px-5 py-3 rounded-2xl bg-surface-elevated/90 border border-primary/30 shadow-glow-sm hover:border-primary/60 transition-all font-mono text-xs">
+      <div class="mb-8 max-w-md mx-auto relative z-30">
+        <button onclick="toggleSkillsDropdown()" class="w-full flex items-center justify-between px-5 py-3 rounded-2xl bg-surface-elevated/90 border border-primary/30 shadow-glow-sm hover:border-primary/60 transition-all font-mono text-xs cursor-pointer">
           <div class="flex items-center gap-2 text-white">
             <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
             <span id="selected-skill-category">Databases &amp; Developer Tools</span>
@@ -677,7 +677,7 @@ model = YOLO(<span class="text-secondary">'best_model.pt'</span>)
         </button>
 
         <!-- Dropdown Menu -->
-        <div id="skills-dropdown-menu" class="hidden absolute top-full left-0 right-0 mt-2 p-2 rounded-2xl bg-surface-card/95 backdrop-blur-2xl border border-white/10 shadow-2xl z-40 space-y-1 font-mono text-xs">
+        <div id="skills-dropdown-menu" class="hidden absolute top-full left-0 right-0 mt-2 p-2 rounded-2xl bg-surface-card/95 backdrop-blur-2xl border border-white/10 shadow-2xl z-50 space-y-1 font-mono text-xs popup-card">
           <button onclick="selectSkill('PostgreSQL')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-white/5 hover:text-primary transition-colors flex items-center justify-between">
             <span>PostgreSQL</span>
             <span class="text-[10px] text-text-sub">Relational Database</span>
@@ -1070,6 +1070,17 @@ model = YOLO(<span class="text-secondary">'best_model.pt'</span>)
       if (selected) selected.innerText = skillName + ' (Selected)';
       toggleSkillsDropdown();
     }
+
+    // Close popups on click outside
+    document.addEventListener('click', (e) => {
+      const skillsMenu = document.getElementById('skills-dropdown-menu');
+      const skillsContainer = skillsMenu ? skillsMenu.closest('.relative') : null;
+      if (skillsMenu && !skillsMenu.classList.contains('hidden') && skillsContainer && !skillsContainer.contains(e.target)) {
+        skillsMenu.classList.add('hidden');
+        const icon = document.getElementById('skills-dropdown-icon');
+        if (icon) icon.innerText = 'expand_more';
+      }
+    });
 
     // Mobile nav toggle
     const toggleBtn = document.getElementById('mobile-toggle');
